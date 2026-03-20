@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2e pilier - Investir en Suisse</title>
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI', Arial;
+    background:#f4f6f9;
+    color:#333;
+}
+
+header {
+    background:linear-gradient(135deg,#d90429,#a6031f);
+    padding:40px;
+    text-align:center;
+}
+
+header img {
+    height:120px;
+}
+
+section {
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+h1 {
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.box {
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin:20px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.highlight {
+    font-weight:bold;
+    color:#d90429;
+}
+
+.form {
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    margin-top:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+input, select {
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+
+button {
+    width:100%;
+    padding:15px;
+    background:#d90429;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.back {
+    display:block;
+    text-align:center;
+    margin-top:30px;
+    text-decoration:none;
+    color:#d90429;
+}
+
+footer {
+    text-align:center;
+    font-size:12px;
+    padding:20px;
+    color:#666;
+}
+
+@media(max-width:768px){
+    header img { height:80px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg">
+</header>
+
+<section>
+
+<h1>🔍 Retrouver son 2e pilier (LPP)</h1>
+
+<div class="box">
+    En Suisse, beaucoup de travailleurs ont de la <span class="highlight">LPP égarée</span>.
+</div>
+
+<div class="box">
+    Lors d’un changement d’emploi ou d’un départ à l’étranger, des fonds peuvent être oubliés.
+    <br><br>
+    👉 Cet argent vous appartient et peut représenter <span class="highlight">plusieurs dizaines de milliers de francs</span>.
+</div>
+
+<div class="box">
+    Mon rôle est de <span class="highlight">retrouver ces fonds</span> et vous aider à en faire le meilleur usage possible.
+</div>
+
+<div class="form">
+    <h3>📞 Être rappelé gratuitement</h3>
+
+    <form action="https://formspree.io/f/xgvkpbya" method="POST">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="tel" name="telephone" placeholder="Votre numéro de téléphone" required>
+
+        <button type="submit">Être rappelé</button>
+    </form>
+</div>
+
+<a href="index.html" class="back">⬅ Retour à l'accueil</a>
+
+</section>
+
+<footer>
+Paul Vaskou - Conseiller FINMA F01560250
+</footer>
+
+</body>
+</html>
