@@ -1,113 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Assurance santé - Investir en Suisse</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assurance santé - Résidents</title>
 
 <style>
 body {
     margin:0;
-    font-family:'Segoe UI', Arial;
-    background:#f4f6f9;
-    color:#333;
+    font-family:Arial;
+    background:#f7f7f7;
 }
 
 /* NAVBAR */
 .navbar {
     position:fixed;
     top:0;
-    left:0;
     width:100%;
-    background:#d90429;
-    display:flex;
-    justify-content:center;
-    gap:30px;
+    background:#c40000;
     padding:15px;
+    text-align:center;
     z-index:1000;
 }
-
 .navbar a {
     color:white;
+    margin:0 15px;
     text-decoration:none;
     font-weight:bold;
 }
-
 .navbar a:hover {
     text-decoration:underline;
 }
 
 /* HEADER */
 header {
-    background:linear-gradient(135deg,#d90429,#a6031f);
-    padding:60px;
+    margin-top:70px;
+    background:#c40000;
+    padding:40px 20px;
     text-align:center;
-    margin-top:60px;
 }
-
 header img {
     height:140px;
 }
 
 /* CONTENU */
 section {
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
-    padding:40px 20px;
-    text-align:center;
+    padding:30px 20px;
 }
 
 h1 {
-    margin-bottom:10px;
+    text-align:center;
 }
 
-.subtitle {
-    color:#666;
-    margin-bottom:40px;
-}
-
-/* CARTES */
-.cards {
+.grid {
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:20px;
 }
 
-.card {
+.box {
     background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    transition:0.3s;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    border-left:5px solid #c40000;
 }
 
-.card:hover {
-    transform:translateY(-5px);
-}
-
-.card h2 {
-    margin-bottom:10px;
-}
-
-.card p {
-    color:#666;
-}
-
-/* BOUTON */
-.btn {
-    display:inline-block;
-    margin-top:20px;
-    background:#d90429;
-    color:white;
-    padding:12px 20px;
-    border-radius:8px;
-    text-decoration:none;
+.highlight {
+    color:#c40000;
     font-weight:bold;
 }
 
+.cta {
+    text-align:center;
+    margin-top:40px;
+}
+
+button {
+    background:#c40000;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover {
+    background:#a00000;
+}
+
 /* MOBILE */
-@media(max-width:768px){
-    .cards {
-        grid-template-columns:1fr;
+@media(max-width:600px){
+    header img {
+        height:100px;
     }
 }
 </style>
@@ -124,33 +111,81 @@ h1 {
     <a href="investissement.html">Investissement</a>
 </nav>
 
+<!-- HEADER -->
 <header>
     <img src="logo.jpeg">
 </header>
 
 <section>
 
-<h1>Assurance santé en Suisse</h1>
-<p class="subtitle">Choisissez votre situation pour accéder aux informations adaptées</p>
+<h1>🏥 Assurance santé en Suisse</h1>
 
-<div class="cards">
+<div class="grid">
 
-<div class="card">
-    <h2>🏠 Résident suisse</h2>
-    <p>
-        Vous vivez en Suisse et devez choisir la meilleure assurance selon votre situation.
-    </p>
-    <a href="assurance-resident.html" class="btn">Voir les solutions</a>
+<div class="box">
+<h3>💥 Un système obligatoire… mais complexe</h3>
+<p>
+Entre franchises, modèles et complémentaires, beaucoup de résidents paient trop cher <span class="highlight">sans le savoir</span>.
+</p>
 </div>
 
-<div class="card">
-    <h2>🌍 Frontalier</h2>
-    <p>
-        Vous travaillez en Suisse mais vivez en France. Le choix entre LAMal et CMU est essentiel.
-    </p>
-    <a href="assurance-frontalier.html" class="btn">Voir les solutions</a>
+<div class="box">
+<h3>📊 Un système unique</h3>
+<p>
+26 cantons, 3 classes d’âge et plus de 50 assureurs.  
+👉 Il existe quasiment <span class="highlight">autant de primes que d’assurés</span>.
+</p>
 </div>
 
+<div class="box">
+<h3>❗ Ce que beaucoup ignorent</h3>
+<p>
+Certaines prestations sont remboursées mais rarement utilisées :
+<br>• fitness  
+<br>• soins à l’étranger  
+<br>• médecines alternatives  
+<br>• soins spécifiques
+</p>
+</div>
+
+<div class="box">
+<h3>⚙️ Une optimisation globale</h3>
+<p>
+Base + complémentaires + franchise + modèle :  
+c’est l’ensemble qui fait la différence.
+</p>
+</div>
+
+<div class="box">
+<h3>💡 Un détail qui change tout</h3>
+<p>
+Une complémentaire à <span class="highlight">10 CHF / mois</span>  
+peut faire économiser bien plus sur l’année.
+</p>
+</div>
+
+<div class="box">
+<h3>📈 Idée reçue fausse</h3>
+<p>
+Certaines caisses premium peuvent être  
+<span class="highlight">moins chères que des low-cost</span>  
+à couverture équivalente.
+</p>
+</div>
+
+<div class="box">
+<h3>🎯 Objectif</h3>
+<p>
+Payer le juste prix, éviter les doublons  
+et améliorer sa couverture.
+</p>
+</div>
+
+</div>
+
+<div class="cta">
+    <h2>📞 Être rappelé gratuitement</h2>
+    <button>Se faire rappeler</button>
 </div>
 
 </section>
