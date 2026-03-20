@@ -3,63 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <title>Investir en Suisse</title>
+
 <style>
-body {margin:0;font-family:Arial;background:#fff;color:#333;}
-header {background:#c40000;color:white;padding:60px 20px;text-align:center;}
-h1 {margin:0;}
-section {padding:40px;max-width:1000px;margin:auto;}
-.buttons {display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
-a.btn {
-background:#c40000;color:white;padding:20px 30px;
-text-decoration:none;font-weight:bold;border-radius:8px;
+body {
+    margin:0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#f8f9fb;
+    color:#333;
 }
-.form {background:#f5f5f5;padding:30px;border-radius:10px;}
-input, select {width:100%;padding:10px;margin:10px 0;}
-button {background:#c40000;color:white;padding:15px;border:none;width:100%;}
+
+/* HEADER */
+header {
+    background:#d90429;
+    padding:20px;
+    text-align:center;
+}
+header img {
+    height:70px;
+}
+
+/* CONTENU */
+section {
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+/* TITRE */
+h2 {
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+/* BULLES */
+.bulles {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.bulle {
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    width:250px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* BOUTONS */
+.buttons {
+    margin-top:30px;
+}
+
+.btn {
+    display:inline-block;
+    background:#d90429;
+    color:white;
+    padding:15px 25px;
+    margin:10px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover {
+    background:#a6031f;
+}
+
+/* FORMULAIRE */
+.form {
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    margin-top:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+input, select {
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+
+button {
+    width:100%;
+    padding:15px;
+    background:#d90429;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    font-size:12px;
+    color:#666;
+    padding:20px;
+}
 </style>
 </head>
 
 <body>
-  <header style="background:#d90429; padding:15px; text-align:center;">
-    <img src="logo.jpeg" alt="Investir en Suisse" style="height:70px;">
-    <p style="color:white; margin-top:10px;">Paul Vaskou - Conseiller FINMA F01560250</p>
+
+<header>
+    <img src="logo.jpeg">
 </header>
 
 <section>
-<h2>🇨🇭 La Suisse : un système unique</h2>
-<p>
-La Suisse est un pays particulier où :
-</p>
-<ul>
-<li>✔️ L’assurance santé est obligatoire et payante chaque mois</li>
-<li>✔️ La retraite repose sur un système de piliers</li>
-<li>✔️ Chacun doit optimiser sa situation lui-même</li>
-</ul>
+    <h2>🇨🇭 La Suisse : un système unique</h2>
+
+    <div class="bulles">
+        <div class="bulle">💳 Assurance santé obligatoire et payante chaque mois</div>
+        <div class="bulle">🏦 Retraite basée sur un système de piliers</div>
+        <div class="bulle">📊 Chacun doit optimiser sa situation lui-même</div>
+    </div>
+
+    <p style="margin-top:30px; font-size:18px;">
+        👉 Je souhaite des informations sur :
+    </p>
+
+    <div class="buttons">
+        <a href="#" class="btn">2e pilier</a>
+        <a href="#" class="btn">3e pilier</a>
+        <a href="#" class="btn">Assurance santé</a>
+    </div>
+
+    <div class="form">
+        <h3>📞 Être rappelé gratuitement</h3>
+        <input type="text" placeholder="Votre nom">
+        <input type="tel" placeholder="Votre numéro de téléphone">
+        <select>
+            <option>Je suis intéressé par :</option>
+            <option>2e pilier</option>
+            <option>3e pilier</option>
+            <option>Assurance santé</option>
+        </select>
+        <button>Être rappelé</button>
+    </div>
 </section>
 
-<section class="buttons">
-<a class="btn" href="2epilier.html">2e pilier</a>
-<a class="btn" href="3epilier.html">3e pilier</a>
-<a class="btn" href="assurance.html">Assurance santé</a>
-</section>
-
-<section class="form">
-<h2>📞 Être rappelé gratuitement</h2>
-
-<form action="TON LIEN FORMSPREE" method="POST">
-<input type="text" name="nom" placeholder="Votre nom" required>
-<input type="tel" name="telephone" placeholder="Votre numéro" required>
-
-<select name="besoin">
-<option>2e pilier</option>
-<option>3e pilier</option>
-<option>Assurance</option>
-</select>
-
-<button type="submit">Être rappelé</button>
-</form>
-
-</section>
+<footer>
+    Paul Vaskou - Conseiller FINMA F01560250
+</footer>
 
 </body>
-</h
+</html>
