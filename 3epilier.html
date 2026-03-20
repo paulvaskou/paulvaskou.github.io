@@ -15,7 +15,7 @@ body {
 /* HEADER */
 header {
     background:linear-gradient(135deg,#d90429,#a6031f);
-    padding:40px;
+    padding:50px;
     text-align:center;
 }
 header img {
@@ -42,13 +42,13 @@ h1 {
 }
 .counter span {
     display:inline-block;
-    background:white;
+    background:linear-gradient(135deg,#ffffff,#ffe5e9);
     color:#d90429;
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
-    padding:15px 30px;
+    padding:15px 35px;
     border-radius:50px;
-    box-shadow:0 10px 30px rgba(217,4,41,0.25);
+    box-shadow:0 10px 30px rgba(217,4,41,0.3);
 }
 
 /* GRID */
@@ -70,9 +70,16 @@ h1 {
 .box {
     background:white;
     padding:25px;
-    border-radius:12px;
+    border-radius:14px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    border-left:5px solid #d90429;
     line-height:1.6;
+    transition:0.3s;
+}
+
+.box:hover {
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
 }
 
 /* HIGHLIGHT */
@@ -85,7 +92,7 @@ h1 {
 .form {
     background:white;
     padding:30px;
-    border-radius:12px;
+    border-radius:14px;
     margin-top:40px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
@@ -106,6 +113,11 @@ button {
     border:none;
     border-radius:8px;
     font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover {
+    background:#a6031f;
 }
 
 /* FOOTER */
@@ -144,33 +156,33 @@ footer {
 
 <!-- INTRO -->
 <div class="box">
-    En Suisse, la retraite repose sur un système de piliers.
-    Cependant, le 1er et le 2e pilier combinés ne couvrent généralement 
-    <span class="highlight">qu’environ 60% du revenu</span>.
+    💡 En Suisse, la retraite repose sur un système de piliers.
     <br><br>
-    Cela signifie que chacun doit compléter lui-même sa retraite pour maintenir son niveau de vie.
+    Le 1er et le 2e pilier combinés couvrent généralement 
+    <span class="highlight">seulement environ 60% du revenu</span>.
+    <br><br>
+    👉 Il est donc essentiel de compléter soi-même sa retraite.
 </div>
 
 <!-- 2 COLONNES -->
 <div class="grid-2">
 
 <div class="box">
-    <strong>Le 3e pilier : un outil essentiel</strong>
+    📊 <strong>Le 3e pilier : un outil essentiel</strong>
     <br><br>
-    Il permet de se constituer un capital, compléter ses revenus
-    et adapter sa stratégie selon sa situation.
+    Permet de se constituer un capital et compléter ses revenus.
     <br><br>
-    Dans certains cas, il permet également de <span class="highlight">réduire ses impôts</span>,
+    Peut aussi offrir une <span class="highlight">optimisation fiscale</span>
     selon le canton et la situation.
 </div>
 
 <div class="box">
-    <strong>Des solutions performantes</strong>
+    📈 <strong>Des solutions performantes</strong>
     <br><br>
-    Accès à <span class="highlight">plus de 200 fonds d’investissement</span>
-    (actions, obligations, matières premières, etc.)
+    Accès à <span class="highlight">plus de 200 fonds</span>
+    (actions, obligations, matières premières…)
     <br><br>
-    Rendement potentiel pouvant atteindre <span class="highlight">jusqu’à 15%</span>.
+    Rendement potentiel jusqu’à <span class="highlight">15%</span>.
 </div>
 
 </div>
@@ -179,21 +191,21 @@ footer {
 <div class="grid-3">
 
 <div class="box">
-    <strong>Investissement</strong>
+    💼 <strong>Investissement</strong>
     <br><br>
-    Solutions adaptées à chaque profil et à chaque objectif.
+    Solutions adaptées à chaque profil.
 </div>
 
 <div class="box">
-    <strong>Projets</strong>
+    🏠 <strong>Projets</strong>
     <br><br>
-    Financer une résidence principale ou constituer un apport.
+    Acheter sa résidence principale ou constituer un apport.
 </div>
 
 <div class="box">
-    <strong>Entrepreneuriat</strong>
+    🚀 <strong>Entrepreneuriat</strong>
     <br><br>
-    Utilisable pour lancer une activité ou structurer un projet.
+    Lancer ou structurer une activité.
 </div>
 
 </div>
@@ -202,34 +214,31 @@ footer {
 <div class="grid-2">
 
 <div class="box">
-    <strong>Un levier reconnu</strong>
+    🏦 <strong>Un levier reconnu</strong>
     <br><br>
-    Ce type de capital est souvent valorisé par les banques,
-    y compris en France.
+    Valorisé par les banques, même en France.
 </div>
 
 <div class="box">
-    <strong>Protection des proches</strong>
+    🛡️ <strong>Protection des proches</strong>
     <br><br>
-    Des capitaux peuvent être prévus pour assurer une stabilité
-    financière à la famille en cas d’imprévu.
+    Sécurité financière prévue en cas d’imprévu.
 </div>
 
 </div>
 
 <!-- FINAL -->
 <div class="box">
-    <strong>La Suisse : un pays d’opportunités</strong>
+    🌍 <strong>La Suisse : un pays d’opportunités</strong>
     <br><br>
     Travailler en Suisse permet d’accéder à des conditions uniques.
     <br><br>
-    Mettre en place une stratégie adaptée permet de transformer ses revenus
-    en véritable patrimoine sur le long terme.
+    👉 Une stratégie adaptée transforme vos revenus en patrimoine durable.
 </div>
 
 <!-- FORM -->
 <div class="form">
-    <h3>Être rappelé gratuitement</h3>
+    <h3>📞 Être rappelé gratuitement</h3>
 
     <form action="https://formspree.io/f/xgvkpbya" method="POST">
         <input type="text" name="nom" placeholder="Votre nom" required>
