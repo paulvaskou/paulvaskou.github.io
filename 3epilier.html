@@ -12,12 +12,38 @@ body {
     color:#333;
 }
 
+/* NAVBAR */
+.navbar {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#d90429;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+    z-index:1000;
+}
+
+.navbar a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.navbar a:hover {
+    text-decoration:underline;
+}
+
 /* HEADER */
 header {
     background:linear-gradient(135deg,#d90429,#a6031f);
     padding:50px;
     text-align:center;
+    margin-top:60px;
 }
+
 header img {
     height:140px;
 }
@@ -39,6 +65,7 @@ h1 {
     text-align:center;
     margin:30px 0;
 }
+
 .counter span {
     display:inline-block;
     background:linear-gradient(135deg,#fff,#ffe5e9);
@@ -51,18 +78,11 @@ h1 {
 }
 
 /* GRID */
-.grid-2, .grid-3 {
+.grid-2 {
     display:grid;
+    grid-template-columns:1fr 1fr;
     gap:20px;
     margin-top:20px;
-}
-
-.grid-2 {
-    grid-template-columns:1fr 1fr;
-}
-
-.grid-3 {
-    grid-template-columns:1fr 1fr 1fr;
 }
 
 /* BLOCS */
@@ -74,12 +94,10 @@ h1 {
     border-left:5px solid #d90429;
     line-height:1.6;
     transition:0.3s;
-    height:100%;
 }
 
 .box:hover {
     transform:translateY(-3px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.12);
 }
 
 .highlight {
@@ -114,9 +132,17 @@ button {
     font-weight:bold;
 }
 
+/* FOOTER */
+footer {
+    text-align:center;
+    font-size:12px;
+    padding:20px;
+    color:#666;
+}
+
 /* MOBILE */
 @media(max-width:768px){
-    .grid-2, .grid-3 {
+    .grid-2 {
         grid-template-columns:1fr;
     }
     header img {
@@ -127,6 +153,14 @@ button {
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="2epilier.html">2e pilier</a>
+    <a href="3epilier.html">3e pilier</a>
+    <a href="assurance.html">Assurance santé</a>
+</nav>
 
 <header>
     <img src="logo.jpeg">
@@ -140,31 +174,25 @@ button {
     <span>+ 200 personnes accompagnées en 2025</span>
 </div>
 
-<!-- INTRO -->
 <div class="box">
-    💡 En Suisse, la retraite repose sur un système de piliers.
+    En Suisse, la retraite repose sur un système de piliers.
     <br><br>
     Le 1er et le 2e pilier couvrent environ 
     <span class="highlight">60% du revenu</span>.
     <br><br>
-    👉 Il est donc essentiel de compléter soi-même sa retraite.
+    Il est donc essentiel de compléter soi-même sa retraite.
 </div>
 
-<!-- 2 COLONNES -->
 <div class="grid-2">
 
 <div class="box">
-    📊 <strong>Le 3e pilier : un outil essentiel</strong>
+    Le 3e pilier permet de se constituer un capital et compléter ses revenus.
     <br><br>
-    Permet de se constituer un capital et compléter ses revenus.
-    <br><br>
-    Peut offrir une <span class="highlight">optimisation fiscale</span>
+    Il peut offrir une <span class="highlight">optimisation fiscale</span>
     selon le canton et la situation.
 </div>
 
 <div class="box">
-    📈 <strong>Des solutions performantes</strong>
-    <br><br>
     Accès à <span class="highlight">plus de 200 fonds</span>
     (actions, obligations, matières premières…)
     <br><br>
@@ -173,50 +201,38 @@ button {
 
 </div>
 
-<!-- 2 COLONNES (corrigé) -->
 <div class="grid-2">
 
 <div class="box">
-    💼 <strong>Investissement</strong>
-    <br><br>
-    Solutions adaptées à chaque profil
-    <br>
+    Solutions adaptées à chaque profil 
     (conservateur, équilibré ou dynamique).
 </div>
 
 <div class="box">
-    🏠 <strong>Projets & financement</strong>
-    <br><br>
     Acheter sa résidence principale ou constituer un apport.
     <br><br>
-    Ce capital est valorisé par les banques, même en France.
+    Valorisé par les banques, même en France.
 </div>
 
 </div>
 
-<!-- 2 COLONNES -->
 <div class="grid-2">
 
 <div class="box">
-    🛡️ <strong>Protection des proches</strong>
-    <br><br>
     Des capitaux peuvent être prévus pour assurer une sécurité
     financière en cas d’imprévu.
 </div>
 
 <div class="box">
-    🌍 <strong>La Suisse : un pays d’opportunités</strong>
-    <br><br>
     Travailler en Suisse permet d’accéder à des conditions uniques.
     <br><br>
-    👉 Une stratégie adaptée transforme vos revenus en patrimoine durable.
+    Une stratégie adaptée transforme vos revenus en patrimoine durable.
 </div>
 
 </div>
 
-<!-- FORM -->
 <div class="form">
-    <h3>📞 Être rappelé gratuitement</h3>
+    <h3>Être rappelé gratuitement</h3>
 
     <form action="https://formspree.io/f/xgvkpbya" method="POST">
         <input type="text" name="nom" placeholder="Votre nom" required>
