@@ -32,8 +32,25 @@ section {
 /* TITRE */
 h1 {
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:20px;
     font-size:30px;
+}
+
+/* COMPTEUR PREMIUM */
+.counter {
+    text-align:center;
+    margin:30px 0;
+}
+.counter span {
+    display:inline-block;
+    background:white;
+    color:#d90429;
+    font-size:32px;
+    font-weight:bold;
+    padding:15px 30px;
+    border-radius:50px;
+    box-shadow:0 10px 30px rgba(217,4,41,0.25);
+    border:2px solid #ffd6db;
 }
 
 /* BLOCS */
@@ -47,36 +64,20 @@ h1 {
     font-size:16px;
 }
 
-/* COMPTEUR */
-.counter {
-    text-align:center;
-    font-size:28px;
-    font-weight:bold;
-    color:#d90429;
-    margin:30px 0;
-}
-
-/* URGENCE */
+/* URGENCE (plus sobre) */
 .urgence {
     background:#fff3f3;
     border-left:5px solid #d90429;
-    padding:25px;
+    padding:20px;
     border-radius:10px;
     margin-top:30px;
+    line-height:1.6;
 }
 
 /* HIGHLIGHT */
 .highlight {
     color:#d90429;
     font-weight:bold;
-}
-
-/* LISTE */
-ul {
-    padding-left:20px;
-}
-li {
-    margin-bottom:10px;
 }
 
 /* FORM */
@@ -131,6 +132,7 @@ footer {
 @media(max-width:768px){
     header img { height:90px; }
     h1 { font-size:24px; }
+    .counter span { font-size:24px; padding:12px 20px; }
 }
 </style>
 </head>
@@ -146,7 +148,7 @@ footer {
 <h1>🔍 Retrouver son 2e pilier (LPP)</h1>
 
 <div class="counter">
-    + 800 000 CHF retrouvés en 2025
+    <span>+ 800 000 CHF retrouvés en 2025</span>
 </div>
 
 <div class="box">
@@ -169,45 +171,17 @@ footer {
 <div class="box">
     <strong>💡 Pourquoi se faire accompagner ?</strong>
     <br><br>
-    Le système suisse est complexe :
-    plus de 1'500 institutions, des procédures longues et peu transparentes.
-    <br><br>
-    Sans accompagnement, il est facile de :
-    <ul>
-        <li>passer à côté de fonds importants</li>
-        <li>abandonner les démarches</li>
-        <li>ou ne jamais récupérer son capital</li>
-    </ul>
-</div>
-
-<div class="box">
-    <strong>🎯 L’accompagnement d’un expert permet :</strong>
-    <ul>
-        <li>d’identifier rapidement les avoirs existants</li>
-        <li>d’optimiser le placement des fonds retrouvés</li>
-    </ul>
+    Le système suisse est complexe : plus de 1'500 institutions, des démarches longues et peu transparentes.
+    Sans accompagnement, il est facile de passer à côté de fonds importants.
 </div>
 
 <div class="urgence">
     <strong>⏳ Pourquoi agir maintenant ?</strong>
     <br><br>
-    Avec le temps, certaines démarches deviennent plus complexes :
-    documents manquants, changements d’employeurs, institutions difficiles à retrouver…
+    Avec le temps, certaines démarches deviennent plus complexes : documents manquants, anciens employeurs,
+    institutions difficiles à identifier…
     <br><br>
-    👉 Résultat : des fonds peuvent rester oubliés pendant des années.
-    <br><br><br>
-    <strong>💸 Chaque année sans action = opportunités perdues</strong>
-    <br><br>
-    Un capital non récupéré :
-    <ul>
-        <li>ne travaille pas</li>
-        <li>ne génère aucun rendement</li>
-        <li>et reste inutilisé</li>
-    </ul>
-    <br>
-    <strong>✔ Une simple vérification peut suffire</strong>
-    <br><br>
-    👉 Faire vérifier sa situation aujourd’hui permet d’éviter de passer à côté de sommes importantes.
+    👉 Un capital non récupéré ne travaille pas et ne génère aucun rendement.
 </div>
 
 <div class="form">
