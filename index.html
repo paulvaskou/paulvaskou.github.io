@@ -8,14 +8,14 @@
 body {
     margin:0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background:#f8f9fb;
+    background:#f4f6f9;
     color:#333;
 }
 
 /* HEADER */
 header {
-    background:#d90429;
-    padding:40px 20px;
+    background:linear-gradient(135deg,#d90429,#a6031f);
+    padding:50px 20px;
     text-align:center;
 }
 header img {
@@ -24,7 +24,7 @@ header img {
 
 /* CONTENU */
 section {
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     padding:40px 20px;
     text-align:center;
@@ -32,16 +32,17 @@ section {
 
 /* TITRE */
 h2 {
-    font-size:28px;
+    font-size:30px;
     margin-bottom:20px;
 }
 
-/* TEXTE INTRO */
+/* INTRO */
 .intro {
     max-width:700px;
-    margin:20px auto;
+    margin:30px auto;
     font-size:17px;
-    line-height:1.6;
+    line-height:1.7;
+    color:#555;
 }
 
 /* BULLES */
@@ -50,15 +51,18 @@ h2 {
     justify-content:center;
     gap:20px;
     flex-wrap:wrap;
-    margin-top:30px;
 }
 
 .bulle {
     background:white;
     padding:20px;
     border-radius:15px;
-    width:250px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    width:260px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.bulle:hover {
+    transform:translateY(-5px);
 }
 
 /* BOUTONS */
@@ -68,7 +72,7 @@ h2 {
 
 .btn {
     display:inline-block;
-    background:#d90429;
+    background:linear-gradient(135deg,#d90429,#a6031f);
     color:white;
     padding:15px 25px;
     margin:10px;
@@ -79,24 +83,25 @@ h2 {
 }
 
 .btn:hover {
-    background:#a6031f;
+    transform:scale(1.05);
 }
 
-/* FORMULAIRE */
+/* FORM */
 .form {
     background:white;
     padding:30px;
     border-radius:15px;
     margin-top:40px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 input, select {
     width:100%;
-    padding:12px;
+    padding:14px;
     margin:10px 0;
     border-radius:8px;
     border:1px solid #ddd;
+    font-size:16px;
 }
 
 button {
@@ -107,6 +112,7 @@ button {
     border:none;
     border-radius:8px;
     font-weight:bold;
+    font-size:16px;
 }
 
 /* FOOTER */
@@ -115,6 +121,27 @@ footer {
     font-size:12px;
     color:#666;
     padding:20px;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+    header img {
+        height:90px;
+    }
+
+    h2 {
+        font-size:24px;
+    }
+
+    .bulle {
+        width:100%;
+    }
+
+    .btn {
+        display:block;
+        width:90%;
+        margin:10px auto;
+    }
 }
 </style>
 </head>
@@ -138,30 +165,34 @@ footer {
         Sans conseiller financier, il est très facile de se perdre dans le système suisse.
         <br><br>
         Je suis un expert agréé FINMA et je vous accompagne pour comprendre,
-        optimiser et sécuriser votre situation financière en Suisse.
+        optimiser et sécuriser votre situation financière.
     </div>
 
-    <p style="margin-top:20px; font-size:18px;">
+    <p style="font-size:18px;">
         👉 Je souhaite des informations sur :
     </p>
 
     <div class="buttons">
-        <a href="#" class="btn">2e pilier</a>
-        <a href="#" class="btn">3e pilier</a>
-        <a href="#" class="btn">Assurance santé</a>
+        <a href="2epilier.html" class="btn">2e pilier</a>
+        <a href="3epilier.html" class="btn">3e pilier</a>
+        <a href="assurance.html" class="btn">Assurance santé</a>
     </div>
 
     <div class="form">
         <h3>📞 Être rappelé gratuitement</h3>
-        <input type="text" placeholder="Votre nom">
-        <input type="tel" placeholder="Votre numéro de téléphone">
-        <select>
-            <option>Je suis intéressé par :</option>
-            <option>2e pilier</option>
-            <option>3e pilier</option>
-            <option>Assurance santé</option>
-        </select>
-        <button>Être rappelé</button>
+        <form action="https://formspree.io/f/xgvkpbya" method="POST">
+            <input type="text" name="nom" placeholder="Votre nom" required>
+            <input type="tel" name="telephone" placeholder="Votre numéro de téléphone" required>
+
+            <select name="interet">
+                <option>Je suis intéressé par :</option>
+                <option>2e pilier</option>
+                <option>3e pilier</option>
+                <option>Assurance santé</option>
+            </select>
+
+            <button type="submit">Être rappelé</button>
+        </form>
     </div>
 </section>
 
