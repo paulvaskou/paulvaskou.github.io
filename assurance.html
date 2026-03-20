@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Assurance santé - Investir en Suisse</title>
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI', Arial;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* NAVBAR */
+.navbar {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#d90429;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+    z-index:1000;
+}
+
+.navbar a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.navbar a:hover {
+    text-decoration:underline;
+}
+
+/* HEADER */
+header {
+    background:linear-gradient(135deg,#d90429,#a6031f);
+    padding:60px;
+    text-align:center;
+    margin-top:60px;
+}
+
+header img {
+    height:140px;
+}
+
+/* CONTENU */
+section {
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+h1 {
+    margin-bottom:10px;
+}
+
+.subtitle {
+    color:#666;
+    margin-bottom:40px;
+}
+
+/* CARTES */
+.cards {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.card {
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom:10px;
+}
+
+.card p {
+    color:#666;
+}
+
+/* BOUTON */
+.btn {
+    display:inline-block;
+    margin-top:20px;
+    background:#d90429;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .cards {
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="2epilier.html">2e pilier</a>
+    <a href="3epilier.html">3e pilier</a>
+    <a href="assurance.html">Assurance santé</a>
+    <a href="investissement.html">Investissement</a>
+</nav>
+
+<header>
+    <img src="logo.jpeg">
+</header>
+
+<section>
+
+<h1>Assurance santé en Suisse</h1>
+<p class="subtitle">Choisissez votre situation pour accéder aux informations adaptées</p>
+
+<div class="cards">
+
+<div class="card">
+    <h2>🏠 Résident suisse</h2>
+    <p>
+        Vous vivez en Suisse et devez choisir la meilleure assurance selon votre situation.
+    </p>
+    <a href="assurance-resident.html" class="btn">Voir les solutions</a>
+</div>
+
+<div class="card">
+    <h2>🌍 Frontalier</h2>
+    <p>
+        Vous travaillez en Suisse mais vivez en France. Le choix entre LAMal et CMU est essentiel.
+    </p>
+    <a href="assurance-frontalier.html" class="btn">Voir les solutions</a>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
