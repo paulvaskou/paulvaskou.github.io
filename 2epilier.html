@@ -12,19 +12,45 @@ body {
     color:#333;
 }
 
+/* NAVBAR */
+.navbar {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#d90429;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+    z-index:1000;
+}
+
+.navbar a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.navbar a:hover {
+    text-decoration:underline;
+}
+
 /* HEADER */
 header {
     background:linear-gradient(135deg,#d90429,#a6031f);
-    padding:40px;
+    padding:50px;
     text-align:center;
+    margin-top:60px;
 }
+
 header img {
     height:140px;
 }
 
 /* CONTENU */
 section {
-    max-width:900px;
+    max-width:1100px;
     margin:auto;
     padding:40px 20px;
 }
@@ -32,49 +58,36 @@ section {
 /* TITRE */
 h1 {
     text-align:center;
-    margin-bottom:20px;
-    font-size:30px;
 }
 
-/* COMPTEUR PREMIUM */
+/* COMPTEUR */
 .counter {
     text-align:center;
     margin:30px 0;
 }
+
 .counter span {
     display:inline-block;
-    background:white;
+    background:linear-gradient(135deg,#fff,#ffe5e9);
     color:#d90429;
-    font-size:32px;
+    font-size:30px;
     font-weight:bold;
-    padding:15px 30px;
+    padding:15px 35px;
     border-radius:50px;
-    box-shadow:0 10px 30px rgba(217,4,41,0.25);
-    border:2px solid #ffd6db;
+    box-shadow:0 10px 30px rgba(217,4,41,0.3);
 }
 
 /* BLOCS */
 .box {
     background:white;
     padding:25px;
-    border-radius:12px;
-    margin:20px 0;
+    border-radius:14px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    line-height:1.6;
-    font-size:16px;
-}
-
-/* URGENCE (plus sobre) */
-.urgence {
-    background:#fff3f3;
     border-left:5px solid #d90429;
-    padding:20px;
-    border-radius:10px;
-    margin-top:30px;
     line-height:1.6;
+    margin-top:20px;
 }
 
-/* HIGHLIGHT */
 .highlight {
     color:#d90429;
     font-weight:bold;
@@ -84,8 +97,8 @@ h1 {
 .form {
     background:white;
     padding:30px;
-    border-radius:12px;
-    margin-top:30px;
+    border-radius:14px;
+    margin-top:40px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
@@ -95,7 +108,6 @@ input {
     margin:10px 0;
     border-radius:8px;
     border:1px solid #ddd;
-    font-size:16px;
 }
 
 button {
@@ -105,18 +117,6 @@ button {
     color:white;
     border:none;
     border-radius:8px;
-    font-weight:bold;
-    font-size:16px;
-    cursor:pointer;
-}
-
-/* RETOUR */
-.back {
-    display:block;
-    text-align:center;
-    margin-top:30px;
-    text-decoration:none;
-    color:#d90429;
     font-weight:bold;
 }
 
@@ -130,14 +130,22 @@ footer {
 
 /* MOBILE */
 @media(max-width:768px){
-    header img { height:90px; }
-    h1 { font-size:24px; }
-    .counter span { font-size:24px; padding:12px 20px; }
+    header img {
+        height:90px;
+    }
 }
 </style>
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="2epilier.html">2e pilier</a>
+    <a href="3epilier.html">3e pilier</a>
+    <a href="assurance.html">Assurance santé</a>
+</nav>
 
 <header>
     <img src="logo.jpeg">
@@ -145,14 +153,14 @@ footer {
 
 <section>
 
-<h1>🔍 Retrouver son 2e pilier (LPP)</h1>
+<h1>Retrouver son 2e pilier (LPP)</h1>
 
 <div class="counter">
     <span>+ 800 000 CHF retrouvés en 2025</span>
 </div>
 
 <div class="box">
-    En Suisse, des <span class="highlight">milliards de francs dorment</span> dans des comptes de prévoyance oubliés.
+    En Suisse, des milliards de francs dorment dans des comptes de prévoyance oubliés.
     <br><br>
     On estime que <span class="highlight">10 milliards de francs restent non déclarés</span>.
 </div>
@@ -165,27 +173,15 @@ footer {
 <div class="box">
     Pourtant, <span class="highlight">chaque travailleur de plus de 25 ans a le droit à cet argent</span>.
     <br><br>
-    Dans certains cas, il peut représenter <span class="highlight">plusieurs dizaines de milliers de francs</span>.
+    Dans certains cas, cela peut représenter plusieurs dizaines de milliers de francs.
 </div>
 
 <div class="box">
-    <strong>💡 Pourquoi se faire accompagner ?</strong>
-    <br><br>
-    Le système suisse est complexe : plus de 1'500 institutions, des démarches longues et peu transparentes.
-    Sans accompagnement, il est facile de passer à côté de fonds importants.
-</div>
-
-<div class="urgence">
-    <strong>⏳ Pourquoi agir maintenant ?</strong>
-    <br><br>
-    Avec le temps, certaines démarches deviennent plus complexes : documents manquants, anciens employeurs,
-    institutions difficiles à identifier…
-    <br><br>
-    👉 Un capital non récupéré ne travaille pas et ne génère aucun rendement.
+    💡 Un capital non récupéré ne génère aucun rendement et ne travaille pas.
 </div>
 
 <div class="form">
-    <h3>📞 Être rappelé gratuitement</h3>
+    <h3>Être rappelé gratuitement</h3>
 
     <form action="https://formspree.io/f/xgvkpbya" method="POST">
         <input type="text" name="nom" placeholder="Votre nom" required>
@@ -194,8 +190,6 @@ footer {
         <button type="submit">Être rappelé</button>
     </form>
 </div>
-
-<a href="index.html" class="back">⬅ Retour à l'accueil</a>
 
 </section>
 
