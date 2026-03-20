@@ -28,9 +28,6 @@ body {
     text-decoration:none;
     font-weight:bold;
 }
-.navbar a:hover {
-    text-decoration:underline;
-}
 
 /* HEADER */
 header {
@@ -54,6 +51,18 @@ h1 {
     text-align:center;
 }
 
+/* ACCROCHE */
+.hero {
+    text-align:center;
+    margin-bottom:30px;
+    font-size:20px;
+}
+.hero span {
+    color:#c40000;
+    font-weight:bold;
+}
+
+/* GRID */
 .grid {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -73,6 +82,7 @@ h1 {
     font-weight:bold;
 }
 
+/* CTA */
 .cta {
     text-align:center;
     margin-top:40px;
@@ -87,9 +97,6 @@ button {
     font-size:16px;
     cursor:pointer;
 }
-button:hover {
-    background:#a00000;
-}
 
 /* MOBILE */
 @media(max-width:600px){
@@ -102,7 +109,6 @@ button:hover {
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
     <a href="index.html">Accueil</a>
     <a href="2epilier.html">2e pilier</a>
@@ -111,7 +117,6 @@ button:hover {
     <a href="investissement.html">Investissement</a>
 </nav>
 
-<!-- HEADER -->
 <header>
     <img src="logo.jpeg">
 </header>
@@ -120,12 +125,16 @@ button:hover {
 
 <h1>🏥 Assurance santé en Suisse</h1>
 
+<div class="hero">
+    💰 Des économies pouvant atteindre <span>100 CHF par mois et par personne</span>
+</div>
+
 <div class="grid">
 
 <div class="box">
 <h3>💥 Un système obligatoire… mais complexe</h3>
 <p>
-Entre franchises, modèles et complémentaires, beaucoup de résidents paient trop cher <span class="highlight">sans le savoir</span>.
+Beaucoup de résidents paient trop cher <span class="highlight">sans le savoir</span>.
 </p>
 </div>
 
@@ -133,14 +142,14 @@ Entre franchises, modèles et complémentaires, beaucoup de résidents paient tr
 <h3>📊 Un système unique</h3>
 <p>
 26 cantons, 3 classes d’âge et plus de 50 assureurs.  
-👉 Il existe quasiment <span class="highlight">autant de primes que d’assurés</span>.
+👉 Il existe quasiment autant de primes que d’assurés.
 </p>
 </div>
 
 <div class="box">
 <h3>❗ Ce que beaucoup ignorent</h3>
 <p>
-Certaines prestations sont remboursées mais rarement utilisées :
+Des prestations sont remboursées :
 <br>• fitness  
 <br>• soins à l’étranger  
 <br>• médecines alternatives  
@@ -149,35 +158,40 @@ Certaines prestations sont remboursées mais rarement utilisées :
 </div>
 
 <div class="box">
-<h3>⚙️ Une optimisation globale</h3>
+<h3>👨‍👩‍👧 Rabais famille</h3>
+<p>
+Certaines assurances proposent des réductions importantes  
+dès le premier enfant.
+</p>
+</div>
+
+<div class="box">
+<h3>⚙️ Optimisation globale</h3>
 <p>
 Base + complémentaires + franchise + modèle :  
-c’est l’ensemble qui fait la différence.
+tout doit être optimisé ensemble.
 </p>
 </div>
 
 <div class="box">
 <h3>💡 Un détail qui change tout</h3>
 <p>
-Une complémentaire à <span class="highlight">10 CHF / mois</span>  
-peut faire économiser bien plus sur l’année.
+Une complémentaire à 10 CHF peut faire économiser bien plus.
 </p>
 </div>
 
 <div class="box">
-<h3>📈 Idée reçue fausse</h3>
+<h3>📈 Idée reçue</h3>
 <p>
-Certaines caisses premium peuvent être  
-<span class="highlight">moins chères que des low-cost</span>  
-à couverture équivalente.
+Des caisses premium peuvent être moins chères  
+que des low-cost.
 </p>
 </div>
 
 <div class="box">
 <h3>🎯 Objectif</h3>
 <p>
-Payer le juste prix, éviter les doublons  
-et améliorer sa couverture.
+Payer le juste prix et améliorer sa couverture.
 </p>
 </div>
 
