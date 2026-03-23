@@ -43,10 +43,17 @@ header {
     background:#c40000;
     padding:40px;
     text-align:center;
-    color:white;
+}
+header img {
+    height:120px;
 }
 
-/* ANIMATION */
+/* TITRE */
+.title {
+    text-align:center;
+    padding:30px 20px;
+}
+
 .fade-in {
     animation:fadeIn 1s ease-in;
 }
@@ -55,18 +62,14 @@ header {
     to {opacity:1; transform:translateY(0);}
 }
 
-/* CONTENU */
-section {
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
-}
-
 /* GRID */
 .grid {
+    max-width:1100px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:20px;
+    padding:20px;
 }
 
 .card {
@@ -87,26 +90,27 @@ section {
 }
 
 /* FAQ */
-.faq-item {
-    margin-bottom:10px;
+.faq {
+    max-width:900px;
+    margin:40px auto;
 }
 
 .faq-question {
     width:100%;
-    text-align:left;
     padding:15px;
-    border:none;
     background:#c40000;
     color:white;
-    font-weight:bold;
+    border:none;
     border-radius:8px;
+    margin-top:10px;
     cursor:pointer;
+    text-align:left;
 }
 
 .faq-answer {
     display:none;
-    padding:15px;
     background:white;
+    padding:15px;
     border-radius:8px;
     margin-top:5px;
 }
@@ -136,17 +140,15 @@ button {
     border:none;
     padding:15px;
     border-radius:8px;
-    font-size:16px;
     cursor:pointer;
 }
 
 /* FOOTER */
 footer {
     margin-top:40px;
-    padding:20px;
     text-align:center;
+    padding:20px;
     font-size:14px;
-    color:#666;
 }
 
 /* WHATSAPP */
@@ -158,7 +160,6 @@ footer {
     color:white;
     padding:15px 18px;
     border-radius:50px;
-    font-size:20px;
     text-decoration:none;
 }
 </style>
@@ -174,12 +175,18 @@ footer {
 <a href="investissement.html">Investissement</a>
 </nav>
 
+<!-- HEADER AVEC LOGO -->
 <header>
-<h1 class="fade-in">📈 La Suisse, le Pays où investir</h1>
+<img src="logo.jpeg">
 </header>
 
-<section>
+<!-- TITRE + ACCROCHE -->
+<div class="title fade-in">
+<h1>📈 Investissement en Suisse</h1>
+<p><strong>La Suisse, le Pays où investir</strong></p>
+</div>
 
+<!-- CARTES -->
 <div class="grid fade-in">
 
 <div class="card">
@@ -229,38 +236,25 @@ footer {
 
 </div>
 
-</section>
-
 <!-- FAQ -->
-<section>
+<div class="faq">
+<h2>❓ Questions fréquentes</h2>
 
-<h2 style="text-align:center;">❓ Questions fréquentes</h2>
-
-<div class="faq-item">
 <button class="faq-question">Est-ce risqué ?</button>
-<div class="faq-answer">Le niveau de risque dépend de votre profil. Les solutions sont adaptées.</div>
-</div>
+<div class="faq-answer">Le niveau de risque dépend de votre profil.</div>
 
-<div class="faq-item">
-<button class="faq-question">Quel rendement espérer ?</button>
-<div class="faq-answer">Entre 4% et 10% nets selon votre profil.</div>
-</div>
+<button class="faq-question">Quel rendement ?</button>
+<div class="faq-answer">Entre 4% et 10% nets.</div>
 
-<div class="faq-item">
-<button class="faq-question">Y a-t-il une fiscalité ?</button>
-<div class="faq-answer">Pas de Flat Tax en Suisse sur l’épargne.</div>
-</div>
+<button class="faq-question">Fiscalité ?</button>
+<div class="faq-answer">Pas de Flat Tax en Suisse.</div>
 
-<div class="faq-item">
-<button class="faq-question">Est-ce que ça a un coût ?</button>
-<div class="faq-answer">Non. Le rendez-vous et l’analyse sont gratuits.</div>
+<button class="faq-question">Coût ?</button>
+<div class="faq-answer">Non, c’est gratuit.</div>
 </div>
-
-</section>
 
 <!-- FORMULAIRE -->
-<section class="cta">
-
+<div class="cta">
 <h2>📞 Être rappelé gratuitement</h2>
 
 <form action="https://formspree.io/f/mwvrznqr" method="POST">
@@ -277,8 +271,7 @@ footer {
 
 <button type="submit">Être rappelé</button>
 </form>
-
-</section>
+</div>
 
 <footer>
 Paul Vaskou — Conseiller financier agréé FINMA<br>
