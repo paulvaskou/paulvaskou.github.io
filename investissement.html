@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Investissement - Investir en Suisse</title>
+<title>Investissement</title>
+
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ERMMTRQZ96"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ERMMTRQZ96');
+</script>
 
 <style>
 body {
@@ -20,7 +29,6 @@ body {
     background:#c40000;
     padding:15px;
     text-align:center;
-    z-index:1000;
 }
 .navbar a {
     color:white;
@@ -35,82 +43,85 @@ header {
     background:#c40000;
     padding:40px;
     text-align:center;
-}
-header img {
-    height:120px;
+    color:white;
 }
 
-/* SECTION */
+/* ANIMATION */
+.fade-in {
+    animation:fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+/* CONTENU */
 section {
     max-width:1100px;
     margin:auto;
-    padding:30px 20px;
-    text-align:center;
-}
-
-/* ACCROCHE */
-.subtitle {
-    font-size:20px;
-    color:#555;
-    margin-bottom:20px;
+    padding:40px 20px;
 }
 
 /* GRID */
 .grid {
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns:repeat(3, 1fr);
     gap:20px;
 }
 
-/* BOX */
-.box {
+.card {
     background:white;
     padding:20px;
     border-radius:12px;
     box-shadow:0 4px 10px rgba(0,0,0,0.05);
-    border-left:5px solid #c40000;
-    text-align:left;
-    opacity:0;
-    transform:translateY(20px);
-    transition:0.6s;
+    border-left:4px solid #c40000;
 }
-.box.show {
-    opacity:1;
-    transform:translateY(0);
+
+.card h3 {
+    margin-bottom:10px;
+}
+
+/* FIX PROFILS */
+.profil p {
+    white-space:nowrap;
 }
 
 /* FAQ */
-.faq {
-    margin-top:50px;
-    text-align:left;
-}
 .faq-item {
-    background:white;
     margin-bottom:10px;
-    border-radius:10px;
-    overflow:hidden;
 }
+
 .faq-question {
+    width:100%;
+    text-align:left;
     padding:15px;
-    cursor:pointer;
+    border:none;
+    background:#c40000;
+    color:white;
     font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
 }
+
 .faq-answer {
-    max-height:0;
-    overflow:hidden;
-    transition:0.4s;
-    padding:0 15px;
-    color:#555;
-}
-.faq-item.active .faq-answer {
-    max-height:300px;
+    display:none;
     padding:15px;
+    background:white;
+    border-radius:8px;
+    margin-top:5px;
 }
 
 /* FORM */
 .cta {
-    margin-top:40px;
+    text-align:center;
+    margin-top:50px;
 }
+
+form {
+    max-width:400px;
+    margin:auto;
+}
+
 input, select {
     width:100%;
     padding:12px;
@@ -118,26 +129,24 @@ input, select {
     border-radius:8px;
     border:1px solid #ccc;
 }
-form {
-    max-width:400px;
-    margin:auto;
-}
+
 button {
     background:#c40000;
     color:white;
     border:none;
     padding:15px;
     border-radius:8px;
+    font-size:16px;
     cursor:pointer;
 }
 
 /* FOOTER */
 footer {
     margin-top:40px;
-    border-top:1px solid #eee;
-    text-align:center;
     padding:20px;
+    text-align:center;
     font-size:14px;
+    color:#666;
 }
 
 /* WHATSAPP */
@@ -151,12 +160,6 @@ footer {
     border-radius:50px;
     font-size:20px;
     text-decoration:none;
-    animation:pulse 1.5s infinite;
-}
-@keyframes pulse {
-    0% {transform:scale(1);}
-    50% {transform:scale(1.1);}
-    100% {transform:scale(1);}
 }
 </style>
 </head>
@@ -172,78 +175,92 @@ footer {
 </nav>
 
 <header>
-<img src="logo.jpeg">
+<h1 class="fade-in">📈 La Suisse, le Pays où investir</h1>
 </header>
 
 <section>
 
-<h1>📈 Investir en Suisse</h1>
+<div class="grid fade-in">
 
-<p class="subtitle">
-La Suisse, le pays où investir
-</p>
+<div class="card">
+<h3>💰 Faire travailler son argent</h3>
+<p>Ne pas laisser son capital dormir.</p>
+</div>
 
-<div class="grid">
+<div class="card profil">
+<h3>📊 Différents profils</h3>
+<p>Conservateur (4-6%) à dynamique (8-10%)</p>
+</div>
 
-<div class="box">💰 <strong>Faire travailler son argent</strong><br><br>Ne pas laisser son capital dormir.</div>
+<div class="card">
+<h3>🏦 Partenariat UBS</h3>
+<p>Solutions solides avec une grande banque.</p>
+</div>
 
-<div class="box">📊 <strong>Différents profils</strong><br><br>Conservateur (4-6%) à dynamique (8-10%).</div>
+<div class="card">
+<h3>🌍 Diversification</h3>
+<p>Actions, obligations, matières premières.</p>
+</div>
 
-<div class="box">🏦 <strong>Partenariat UBS</strong><br><br>Solutions solides avec une grande banque.</div>
+<div class="card">
+<h3>🚫 Pas de Flat Tax</h3>
+<p>Contrairement à la France.</p>
+</div>
 
-<div class="box">🌍 <strong>Diversification</strong><br><br>Actions, obligations, matières premières.</div>
+<div class="card">
+<h3>📈 Rendement long terme</h3>
+<p>Stratégie adaptée à vos objectifs.</p>
+</div>
 
-<div class="box">🚫 <strong>Pas de Flat Tax</strong><br><br>Contrairement à la France.</div>
+<div class="card">
+<h3>⚖️ Gestion du risque</h3>
+<p>Selon votre profil.</p>
+</div>
 
-<div class="box">📈 <strong>Rendement long terme</strong><br><br>Stratégie adaptée à vos objectifs.</div>
+<div class="card">
+<h3>📉 Inflation</h3>
+<p>Protéger son capital.</p>
+</div>
 
-<div class="box">⚖️ <strong>Gestion du risque</strong><br><br>Selon votre profil.</div>
-
-<div class="box">📉 <strong>Inflation</strong><br><br>Protéger son capital.</div>
-
-<div class="box">🤝 <strong>Accompagnement</strong><br><br>Stratégie personnalisée.</div>
+<div class="card">
+<h3>🤝 Accompagnement</h3>
+<p>Stratégie personnalisée.</p>
+</div>
 
 </div>
+
+</section>
 
 <!-- FAQ -->
-<div class="faq">
+<section>
 
-<h2>❓ Questions fréquentes</h2>
+<h2 style="text-align:center;">❓ Questions fréquentes</h2>
 
 <div class="faq-item">
-<div class="faq-question">Est-ce risqué ?</div>
-<div class="faq-answer">Tout dépend du profil choisi. Des solutions existent du conservateur au dynamique.</div>
+<button class="faq-question">Est-ce risqué ?</button>
+<div class="faq-answer">Le niveau de risque dépend de votre profil. Les solutions sont adaptées.</div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question">Quel rendement peut-on espérer ?</div>
-<div class="faq-answer">Entre environ 4% et 10% selon votre profil.</div>
+<button class="faq-question">Quel rendement espérer ?</button>
+<div class="faq-answer">Entre 4% et 10% nets selon votre profil.</div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question">Pourquoi investir en Suisse ?</div>
-<div class="faq-answer">Stabilité, performance et absence de Flat Tax.</div>
+<button class="faq-question">Y a-t-il une fiscalité ?</button>
+<div class="faq-answer">Pas de Flat Tax en Suisse sur l’épargne.</div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question">Puis-je retirer mon argent ?</div>
-<div class="faq-answer">Oui selon les solutions choisies.</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Faut-il beaucoup d’argent ?</div>
-<div class="faq-answer">Non, des solutions existent pour tous les profils.</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Est-ce que cela a un coût ?</div>
+<button class="faq-question">Est-ce que ça a un coût ?</button>
 <div class="faq-answer">Non. Le rendez-vous et l’analyse sont gratuits.</div>
 </div>
 
-</div>
+</section>
 
-<!-- FORM -->
-<div class="cta">
+<!-- FORMULAIRE -->
+<section class="cta">
+
 <h2>📞 Être rappelé gratuitement</h2>
 
 <form action="https://formspree.io/f/mwvrznqr" method="POST">
@@ -252,15 +269,14 @@ La Suisse, le pays où investir
 
 <select name="motif" required>
 <option value="">Motif de la demande</option>
+<option>Investissement</option>
 <option>2e Pilier</option>
 <option>3e Pilier</option>
 <option>Assurance santé</option>
-<option>Investissement</option>
 </select>
 
 <button type="submit">Être rappelé</button>
 </form>
-</div>
 
 </section>
 
@@ -269,25 +285,13 @@ Paul Vaskou — Conseiller financier agréé FINMA<br>
 Numéro FINMA : F01560250
 </footer>
 
-<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509" target="_blank">
-💬
-</a>
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509" target="_blank">💬</a>
 
 <script>
-// animation blocs
-const boxes = document.querySelectorAll('.box');
-window.addEventListener('scroll', () => {
-boxes.forEach(box => {
-if(box.getBoundingClientRect().top < window.innerHeight - 50){
-box.classList.add('show');
-}
-});
-});
-
-// FAQ
-document.querySelectorAll(".faq-item").forEach(item => {
-item.addEventListener("click", () => {
-item.classList.toggle("active");
+document.querySelectorAll(".faq-question").forEach(btn=>{
+btn.addEventListener("click",()=>{
+let ans=btn.nextElementSibling;
+ans.style.display = ans.style.display==="block"?"none":"block";
 });
 });
 </script>
