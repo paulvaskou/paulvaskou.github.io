@@ -40,16 +40,12 @@ header img {
     height:120px;
 }
 
-/* CONTENU */
+/* SECTION */
 section {
     max-width:1100px;
     margin:auto;
     padding:30px 20px;
     text-align:center;
-}
-
-h1 {
-    margin-bottom:10px;
 }
 
 /* COMPTEUR */
@@ -71,7 +67,7 @@ h1 {
     gap:20px;
 }
 
-/* CARRES */
+/* BOX */
 .box {
     background:white;
     padding:20px;
@@ -81,8 +77,32 @@ h1 {
     text-align:left;
 }
 
-.box strong {
-    color:#c40000;
+/* FAQ */
+.faq {
+    margin-top:50px;
+    text-align:left;
+}
+
+.faq-item {
+    background:white;
+    margin-bottom:10px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    overflow:hidden;
+}
+
+.faq-question {
+    padding:15px;
+    cursor:pointer;
+    font-weight:bold;
+    background:#fff;
+}
+
+.faq-answer {
+    padding:15px;
+    display:none;
+    border-top:1px solid #eee;
+    color:#555;
 }
 
 /* FORM */
@@ -119,7 +139,6 @@ footer {
     text-align:center;
     padding:20px;
     font-size:14px;
-    color:#666;
 }
 
 /* WHATSAPP */
@@ -139,17 +158,16 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-    <a href="index.html">Accueil</a>
-    <a href="2epilier.html">2e Pilier</a>
-    <a href="3epilier.html">3e Pilier</a>
-    <a href="assurance.html">Assurance santé</a>
-    <a href="investissement.html">Investissement</a>
+<a href="index.html">Accueil</a>
+<a href="2epilier.html">2e Pilier</a>
+<a href="3epilier.html">3e Pilier</a>
+<a href="assurance.html">Assurance santé</a>
+<a href="investissement.html">Investissement</a>
 </nav>
 
 <header>
-    <img src="logo.jpeg">
+<img src="logo.jpeg">
 </header>
 
 <section>
@@ -163,95 +181,123 @@ footer {
 <div class="grid">
 
 <div class="box">
-<strong>Un droit pour tous</strong><br><br>
+💡 <strong>Un droit pour tous</strong><br><br>
 Chaque travailleur de plus de 25 ans a droit à cet argent.
 </div>
 
 <div class="box">
-<strong>Des milliards oubliés</strong><br><br>
-On estime que plus de <strong>10 milliards de francs</strong> restent non déclarés en Suisse.
+💰 <strong>Des milliards oubliés</strong><br><br>
+Plus de <strong>10 milliards de francs</strong> restent non déclarés.
 </div>
 
 <div class="box">
-<strong>Pourquoi cet argent est perdu</strong><br><br>
-Changement d’emploi, départ à l’étranger ou oubli administratif :  
-les avoirs peuvent être transférés sur des comptes de libre passage puis totalement perdus de vue.
+🔄 <strong>Pourquoi cet argent est perdu</strong><br><br>
+Changement d’emploi, départ ou oubli administratif.
 </div>
 
 <div class="box">
-<strong>Des montants importants</strong><br><br>
-Dans certains cas, cela peut représenter <strong>plusieurs dizaines de milliers de francs</strong>.
+📈 <strong>Des montants importants</strong><br><br>
+Plusieurs dizaines de milliers de francs dans certains cas.
 </div>
 
 <div class="box">
-<strong>Un système complexe</strong><br><br>
-Plus de 1'500 institutions, des démarches longues et peu transparentes.
+🏦 <strong>Un système complexe</strong><br><br>
+Plus de 1'500 institutions et peu de transparence.
 </div>
 
 <div class="box">
-<strong>L’importance d’un accompagnement</strong><br><br>
-Un expert permet de retrouver ces fonds rapidement et d’en optimiser l’utilisation.
-</div>
-
-</div>
-
-<!-- 🔥 BLOC CRÉDIBILITÉ (remplace témoignages) -->
-<div class="grid" style="margin-top:40px;">
-
-<div class="box">
-<strong>🔒 Une approche sérieuse</strong><br><br>
-Chaque situation est analysée dans le respect des normes FINMA.
+🎯 <strong>L’importance d’un accompagnement</strong><br><br>
+Retrouver et optimiser rapidement vos fonds.
 </div>
 
 <div class="box">
-<strong>📊 Des résultats concrets</strong><br><br>
-Plus de <strong>800 000 CHF retrouvés en 2025</strong>.
+🔒 <strong>Une approche sérieuse</strong><br><br>
+Respect total des normes FINMA.
 </div>
 
 <div class="box">
-<strong>⚡ Un gain de temps</strong><br><br>
-Des démarches souvent longues, simplifiées grâce à un accompagnement.
+⚡ <strong>Un gain de temps</strong><br><br>
+Des démarches simplifiées.
 </div>
 
 <div class="box">
-<strong>🤝 Un accompagnement indépendant</strong><br><br>
-Les solutions sont choisies uniquement dans l’intérêt du client.
+🤝 <strong>Un accompagnement indépendant</strong><br><br>
+Toujours dans votre intérêt.
+</div>
+
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+
+<h2>❓ Questions fréquentes</h2>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que j’ai forcément de l’argent à récupérer ?</div>
+<div class="faq-answer">Pas forcément, mais beaucoup de personnes ignorent qu’elles disposent d’avoirs oubliés.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que la démarche est compliquée ?</div>
+<div class="faq-answer">Sans accompagnement, la démarche est complexe. L’objectif est de faire cela sans prise de tête, avec un professionnel.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Combien de temps ça prend ?</div>
+<div class="faq-answer">Cela dépend des cas, mais peut prendre plusieurs semaines.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que cela a un coût ?</div>
+<div class="faq-answer">Non. Le rendez-vous et la recherche sont toujours gratuits.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que c’est sécurisé ?</div>
+<div class="faq-answer">Oui, dans le respect des normes suisses et FINMA.</div>
 </div>
 
 </div>
 
 <!-- FORM -->
 <div class="cta">
-    <h2>📞 Être rappelé gratuitement</h2>
+<h2>📞 Être rappelé gratuitement</h2>
 
-    <form action="https://formspree.io/f/mwvrznqr" method="POST">
-        <input type="text" name="nom" placeholder="Votre nom" required>
-        <input type="tel" name="telephone" placeholder="Votre numéro" required>
+<form action="https://formspree.io/f/mwvrznqr" method="POST">
+<input type="text" name="nom" placeholder="Votre nom" required>
+<input type="tel" name="telephone" placeholder="Votre numéro" required>
 
-        <select name="motif" required>
-            <option value="">Motif de la demande</option>
-            <option>2e Pilier</option>
-            <option>3e Pilier</option>
-            <option>Assurance santé</option>
-            <option>Investissement</option>
-        </select>
+<select name="motif" required>
+<option value="">Motif de la demande</option>
+<option>2e Pilier</option>
+<option>3e Pilier</option>
+<option>Assurance santé</option>
+<option>Investissement</option>
+</select>
 
-        <button type="submit">Être rappelé</button>
-    </form>
+<button type="submit">Être rappelé</button>
+</form>
 </div>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-    Paul Vaskou — Conseiller financier agréé FINMA<br>
-    Numéro FINMA : F01560250
+Paul Vaskou — Conseiller financier agréé FINMA<br>
+Numéro FINMA : F01560250
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509&text=Bonjour%20je%20souhaite%20des%20informations%20sur%20le%202e%20pilier" target="_blank">
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509" target="_blank">
 💬
 </a>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(q => {
+q.addEventListener("click", () => {
+let answer = q.nextElementSibling;
+answer.style.display = answer.style.display === "block" ? "none" : "block";
+});
+});
+</script>
 
 </body>
 </html>
