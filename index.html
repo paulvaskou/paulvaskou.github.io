@@ -17,89 +17,94 @@ gtag('config', 'G-ERMMTRQZ96');
 <style>
 body {
     margin:0;
-    font-family:'Segoe UI', Arial;
-    background:#f4f6f9;
-    color:#333;
+    font-family:Arial;
+    background:#f7f7f7;
 }
 
 /* NAVBAR */
 .navbar {
     position:fixed;
     top:0;
-    left:0;
     width:100%;
-    background:#d90429;
-    display:flex;
-    justify-content:center;
-    gap:30px;
+    background:#c40000;
     padding:15px;
+    text-align:center;
     z-index:1000;
 }
-
 .navbar a {
     color:white;
+    margin:0 15px;
     text-decoration:none;
     font-weight:bold;
 }
 
-.navbar a:hover {
-    text-decoration:underline;
-}
-
 /* HEADER */
 header {
-    background:linear-gradient(135deg,#d90429,#a6031f);
-    padding:60px;
+    margin-top:70px;
+    background:#c40000;
+    padding:50px;
     text-align:center;
-    margin-top:60px;
 }
-
 header img {
-    height:120px;
+    height:160px;
 }
 
 /* CONTENU */
 section {
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     padding:40px 20px;
     text-align:center;
 }
 
 h1 {
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 
-.subtitle {
-    color:#666;
+/* BULLES */
+.bubbles {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
     margin-bottom:30px;
+}
+
+.bubble {
+    background:white;
+    padding:15px 20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* TEXTE */
+.intro {
+    margin:30px 0;
+    color:#555;
 }
 
 /* BOUTONS */
 .buttons {
-    margin:30px 0;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
 }
 
-.btn {
-    display:inline-block;
-    margin:10px;
-    background:#d90429;
+.buttons a {
+    background:#c40000;
     color:white;
-    padding:12px 20px;
+    padding:15px 25px;
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
-    transition:0.3s;
 }
 
-.btn:hover {
-    transform:scale(1.05);
-}
-
-/* FORM */
-form {
-    max-width:400px;
-    margin:30px auto;
+/* FORMULAIRE */
+.cta {
+    text-align:center;
+    margin-top:40px;
 }
 
 input, select {
@@ -110,23 +115,43 @@ input, select {
     border:1px solid #ccc;
 }
 
+form {
+    max-width:400px;
+    margin:auto;
+}
+
 button {
-    background:#d90429;
+    background:#c40000;
     color:white;
     border:none;
-    padding:15px;
+    padding:15px 25px;
     border-radius:8px;
+    font-size:16px;
     cursor:pointer;
-    font-weight:bold;
 }
 
 /* FOOTER */
 footer {
     margin-top:40px;
+    border-top:1px solid #eee;
+    text-align:center;
     padding:20px;
     font-size:14px;
-    text-align:center;
-    color:#555;
+    color:#666;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50px;
+    font-size:20px;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -142,51 +167,68 @@ footer {
     <a href="investissement.html">Investissement</a>
 </nav>
 
-<!-- HEADER -->
 <header>
     <img src="logo.jpeg">
 </header>
 
-<!-- CONTENU -->
 <section>
 
 <h1>La Suisse : un système unique</h1>
 
-<p class="subtitle">
-Faites-vous accompagner par un expert agréé FINMA pour comprendre, optimiser et sécuriser votre situation.
-</p>
-
-<div class="buttons">
-    <a href="2epilier.html" class="btn">2e Pilier</a>
-    <a href="3epilier.html" class="btn">3e Pilier</a>
-    <a href="assurance.html" class="btn">Assurance santé</a>
-    <a href="investissement.html" class="btn">Investissement</a>
+<div class="bubbles">
+    <div class="bubble">💳 Assurance santé obligatoire</div>
+    <div class="bubble">🏦 Système de retraite en piliers</div>
+    <div class="bubble">📊 Optimisation financière essentielle</div>
 </div>
 
-<h2>📞 Être rappelé gratuitement</h2>
+<div class="intro">
+Sans accompagnement, il est facile de se perdre dans le système suisse.<br><br>
+Faites vous accompagner par un expert agréé FINMA pour comprendre, optimiser et sécuriser votre situation financière.
+</div>
 
-<form action="https://formspree.io/f/mwvrznqr" method="POST">
-    <input type="text" name="nom" placeholder="Votre nom" required>
-    <input type="tel" name="telephone" placeholder="Votre numéro" required>
+<div class="buttons">
+    <a href="2epilier.html">2e Pilier</a>
+    <a href="3epilier.html">3e Pilier</a>
+    <a href="assurance.html">Assurance santé</a>
+    <a href="investissement.html">Investissement en Suisse</a>
+</div>
 
-    <select name="motif" required>
-        <option value="">Motif de la demande</option>
-        <option>2e Pilier</option>
-        <option>3e Pilier</option>
-        <option>Assurance santé</option>
-        <option>Investissement</option>
-    </select>
+<!-- FORMULAIRE -->
+<div class="cta">
+    <h2>📞 Être rappelé gratuitement</h2>
 
-    <button type="submit">Être rappelé</button>
-</form>
+    <form action="https://formspree.io/f/mwvrznqr" method="POST">
+        
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        
+        <input type="tel" name="telephone" placeholder="Votre numéro" required>
+
+        <select name="motif" required>
+            <option value="">Motif de la demande</option>
+            <option>2e Pilier</option>
+            <option>3e Pilier</option>
+            <option>Assurance santé</option>
+            <option>Investissement</option>
+        </select>
+
+        <button type="submit">Être rappelé</button>
+    </form>
+</div>
 
 </section>
 
 <!-- FOOTER -->
 <footer>
-Paul Vaskou — Conseiller financier agréé FINMA<br>
-Numéro FINMA : F01560250
+    <p>
+        Paul Vaskou — Conseiller financier agréé FINMA<br>
+        Numéro FINMA : F01560250
+    </p>
 </footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509&text=Bonjour%20je%20souhaite%20%C3%AAtre%20rappel%C3%A9" target="_blank">
+    💬
+</a>
 
 </body>
 </html>
