@@ -48,6 +48,18 @@ section {
     text-align:center;
 }
 
+/* COMPTEUR */
+.counter {
+    font-size:24px;
+    font-weight:bold;
+    color:#c40000;
+    background:white;
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
 /* GRID */
 .grid {
     display:grid;
@@ -172,17 +184,21 @@ footer {
 
 <h1>📈 Optimiser son 3e Pilier</h1>
 
+<div class="counter">
++ <span id="counter">0</span> CHF épargnés
+</div>
+
 <div class="grid">
 
 <div class="box">💡 <strong>Un pilier essentiel</strong><br><br>Les 1er et 2e piliers couvrent environ 60% du revenu.</div>
 
-<div class="box">📊 <strong>Compléter sa retraite</strong><br><br>Le 3e pilier permet d’assurer son niveau de vie.</div>
+<div class="box">📊 <strong>Compléter sa retraite</strong><br><br>Maintenir son niveau de vie à long terme.</div>
 
-<div class="box">📈 <strong>Investir intelligemment</strong><br><br>Accès à des fonds performants adaptés à chaque profil.</div>
+<div class="box">📈 <strong>Investir intelligemment</strong><br><br>Accès à des fonds adaptés à chaque profil.</div>
 
 <div class="box">⚖️ <strong>Plusieurs profils</strong><br><br>Conservateur, équilibré ou dynamique.</div>
 
-<div class="box">💰 <strong>Fiscalité avantageuse</strong><br><br>Déductible selon canton et situation (surtout 3a).</div>
+<div class="box">💰 <strong>Fiscalité avantageuse</strong><br><br>Déductible selon canton et statut.</div>
 
 <div class="box">🏠 <strong>Projets</strong><br><br>Achat immobilier ou création d’entreprise.</div>
 
@@ -190,7 +206,7 @@ footer {
 
 <div class="box">⚠️ <strong>Choix stratégique</strong><br><br>Tous les produits ne se valent pas.</div>
 
-<div class="box">🤝 <strong>Accompagnement</strong><br><br>Optimiser selon votre situation.</div>
+<div class="box">🤝 <strong>Accompagnement</strong><br><br>Optimisation personnalisée.</div>
 
 </div>
 
@@ -207,7 +223,7 @@ footer {
 <div class="faq-item">
 <div class="faq-question">Est-ce que je peux récupérer mon argent ?</div>
 <div class="faq-answer">
-3a : bloqué sauf cas spécifiques.<br>
+3a : bloqué sauf cas spécifiques (immobilier, départ, entreprise).<br>
 3b : disponible selon contrat.
 </div>
 </div>
@@ -215,7 +231,14 @@ footer {
 <div class="faq-item">
 <div class="faq-question">Y a-t-il un avantage fiscal ?</div>
 <div class="faq-answer">
-Oui, surtout pour le 3a, selon canton et statut.
+Oui, surtout pour le 3a, selon canton et statut (notamment frontalier).
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que c’est risqué ?</div>
+<div class="faq-answer">
+Non, cela dépend du profil choisi.
 </div>
 </div>
 
@@ -269,6 +292,19 @@ box.classList.add('show');
 }
 });
 });
+
+// compteur
+let count = 0;
+let target = 2000000;
+
+let counter = setInterval(() => {
+count += 10000;
+if(count >= target){
+count = target;
+clearInterval(counter);
+}
+document.getElementById("counter").innerText = count.toLocaleString();
+}, 10);
 
 // FAQ
 document.querySelectorAll(".faq-item").forEach(item => {
