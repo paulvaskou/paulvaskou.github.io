@@ -98,7 +98,7 @@ h1 {
     margin-top:40px;
 }
 
-input {
+input, select {
     width:100%;
     padding:12px;
     margin:10px 0;
@@ -119,6 +119,30 @@ button {
     border-radius:8px;
     font-size:16px;
     cursor:pointer;
+}
+
+/* FOOTER */
+footer {
+    margin-top:40px;
+    border-top:1px solid #eee;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    color:#666;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50px;
+    font-size:20px;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -165,14 +189,37 @@ Faites vous accompagner par un expert agréé FINMA pour comprendre, optimiser e
     <h2>📞 Être rappelé gratuitement</h2>
 
     <form action="https://formspree.io/f/mwvrznqr" method="POST">
+        
         <input type="text" name="nom" placeholder="Votre nom" required>
+        
         <input type="tel" name="telephone" placeholder="Votre numéro" required>
+
+        <select name="motif" required>
+            <option value="">Motif de la demande</option>
+            <option>2e Pilier</option>
+            <option>3e Pilier</option>
+            <option>Assurance santé</option>
+            <option>Investissement</option>
+        </select>
 
         <button type="submit">Être rappelé</button>
     </form>
 </div>
 
 </section>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        Paul Vaskou — Conseiller financier agréé FINMA<br>
+        Numéro FINMA : F01560250
+    </p>
+</footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/41783515509" target="_blank">
+    💬
+</a>
 
 </body>
 </html>
