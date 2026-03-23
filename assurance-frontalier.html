@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assurance santé - Frontaliers</title>
+<title>Assurance frontalier - Investir en Suisse</title>
 
 <style>
 body {
@@ -37,29 +37,27 @@ header {
     text-align:center;
 }
 header img {
-    height:140px;
+    height:120px;
 }
 
-/* CONTENU */
+/* SECTION */
 section {
     max-width:1100px;
     margin:auto;
     padding:30px 20px;
-}
-
-h1 {
     text-align:center;
 }
 
-/* ACCROCHE */
-.hero {
-    text-align:center;
-    margin-bottom:30px;
-    font-size:20px;
-}
-.hero span {
-    color:#c40000;
+/* COMPTEUR */
+.counter {
+    font-size:24px;
     font-weight:bold;
+    color:#c40000;
+    background:white;
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:20px;
+    margin-bottom:30px;
 }
 
 /* GRID */
@@ -76,22 +74,94 @@ h1 {
     border-radius:12px;
     box-shadow:0 4px 10px rgba(0,0,0,0.05);
     border-left:5px solid #c40000;
+    text-align:left;
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.6s;
+}
+.box.show {
+    opacity:1;
+    transform:translateY(0);
 }
 
-/* CTA */
+/* FAQ */
+.faq {
+    margin-top:50px;
+    text-align:left;
+}
+.faq-item {
+    background:white;
+    margin-bottom:10px;
+    border-radius:10px;
+    overflow:hidden;
+}
+.faq-question {
+    padding:15px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.faq-answer {
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s;
+    padding:0 15px;
+    color:#555;
+}
+.faq-item.active .faq-answer {
+    max-height:300px;
+    padding:15px;
+}
+
+/* FORM */
 .cta {
-    text-align:center;
     margin-top:40px;
 }
-
+input, select {
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+form {
+    max-width:400px;
+    margin:auto;
+}
 button {
     background:#c40000;
     color:white;
     border:none;
-    padding:15px 25px;
+    padding:15px;
     border-radius:8px;
-    font-size:16px;
     cursor:pointer;
+}
+
+/* FOOTER */
+footer {
+    margin-top:40px;
+    border-top:1px solid #eee;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50px;
+    font-size:20px;
+    text-decoration:none;
+    animation:pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {transform:scale(1);}
+    50% {transform:scale(1.1);}
+    100% {transform:scale(1);}
 }
 </style>
 </head>
@@ -99,74 +169,152 @@ button {
 <body>
 
 <nav class="navbar">
-    <a href="index.html">Accueil</a>
-    <a href="2epilier.html">2e Pilier</a>
-    <a href="3epilier.html">3e Pilier</a>
-    <a href="assurance.html">Assurance santé</a>
-    <a href="investissement.html">Investissement</a>
+<a href="index.html">Accueil</a>
+<a href="2epilier.html">2e Pilier</a>
+<a href="3epilier.html">3e Pilier</a>
+<a href="assurance.html">Assurance santé</a>
+<a href="investissement.html">Investissement</a>
 </nav>
 
 <header>
-    <img src="logo.jpeg">
+<img src="logo.jpeg">
 </header>
 
 <section>
 
 <h1>🌍 Assurance santé frontalier</h1>
 
-<div class="hero">
-    ⚠️ Un mauvais choix peut coûter <span>plusieurs milliers de francs</span>
+<div class="counter">
++ <span id="counter">0</span> clients aiguillés en 2025
 </div>
 
 <div class="grid">
 
-<div class="box">
-<h3>❗ Un choix important</h3>
-<p>
-Choisir entre LAMal et CMU n’est pas anodin.  
-👉 Une erreur peut coûter cher sur plusieurs années.
-</p>
-</div>
+<div class="box">⚖️ <strong>LAMal ou CMU</strong><br><br>Deux systèmes totalement différents.</div>
 
-<div class="box">
-<h3>📊 Un système complexe</h3>
-<p>
-Les différences sont nombreuses et souvent mal comprises.  
-👉 Beaucoup décident sans avoir toutes les informations.
-</p>
-</div>
+<div class="box">⚠️ <strong>Un choix important</strong><br><br>Décision souvent irréversible.</div>
 
-<div class="box">
-<h3>💰 Un risque réel</h3>
-<p>
-Selon votre situation, l’écart peut représenter  
-plusieurs milliers de francs.
-</p>
-</div>
+<div class="box">💰 <strong>Des écarts importants</strong><br><br>Plusieurs milliers de francs selon votre choix.</div>
 
-<div class="box">
-<h3>🤝 Besoin d’un conseil</h3>
-<p>
-Sans accompagnement, il est facile de se tromper.  
-👉 Un conseil adapté permet de faire le bon choix dès le départ.
-</p>
-</div>
+<div class="box">📊 <strong>Une situation unique</strong><br><br>Chaque profil est différent.</div>
 
-<div class="box">
-<h3>🎯 Objectif</h3>
-<p>
-Faire le choix le plus avantageux selon votre situation.
-</p>
-</div>
+<div class="box">❌ <strong>Erreurs fréquentes</strong><br><br>Beaucoup décident sans comprendre.</div>
+
+<div class="box">🤝 <strong>Besoin d’un expert</strong><br><br>Faire le bon choix dès le départ.</div>
 
 </div>
 
+<!-- FAQ -->
+<div class="faq">
+
+<h2>❓ Questions fréquentes</h2>
+
+<div class="faq-item">
+<div class="faq-question">LAMal ou CMU : quel est le meilleur choix ?</div>
+<div class="faq-answer">
+Cela dépend de votre situation (revenus, famille, soins…).
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que je peux changer après avoir choisi ?</div>
+<div class="faq-answer">
+Non dans la majorité des cas. Le choix est souvent irréversible.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que je vais payer plus cher ?</div>
+<div class="faq-answer">
+Un mauvais choix peut coûter plusieurs milliers de francs sur plusieurs années.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Puis-je me faire soigner en France et en Suisse ?</div>
+<div class="faq-answer">
+Oui, mais les remboursements diffèrent fortement selon le système choisi.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que la démarche est compliquée ?</div>
+<div class="faq-answer">
+Sans accompagnement, c’est complexe. L’objectif est de faire simple avec un professionnel.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Est-ce que cela a un coût ?</div>
+<div class="faq-answer">
+Non. Le rendez-vous et l’analyse sont gratuits.
+</div>
+</div>
+
+</div>
+
+<!-- FORM -->
 <div class="cta">
-    <h2>📞 Être rappelé gratuitement</h2>
-    <button>Se faire rappeler</button>
+<h2>📞 Être rappelé gratuitement</h2>
+
+<form action="https://formspree.io/f/mwvrznqr" method="POST">
+<input type="text" name="nom" placeholder="Votre nom" required>
+<input type="tel" name="telephone" placeholder="Votre numéro" required>
+
+<select name="motif" required>
+<option value="">Motif de la demande</option>
+<option>2e Pilier</option>
+<option>3e Pilier</option>
+<option>Assurance santé</option>
+<option>Investissement</option>
+</select>
+
+<button type="submit">Être rappelé</button>
+</form>
 </div>
 
 </section>
+
+<footer>
+Paul Vaskou — Conseiller financier agréé FINMA<br>
+Numéro FINMA : F01560250
+</footer>
+
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509" target="_blank">
+💬
+</a>
+
+<script>
+// animation blocs
+const boxes = document.querySelectorAll('.box');
+window.addEventListener('scroll', () => {
+boxes.forEach(box => {
+if(box.getBoundingClientRect().top < window.innerHeight - 50){
+box.classList.add('show');
+}
+});
+});
+
+// compteur
+let count = 0;
+let target = 150;
+
+let counter = setInterval(() => {
+count += 1;
+if(count >= target){
+count = target;
+clearInterval(counter);
+}
+document.getElementById("counter").innerText = count;
+}, 20);
+
+// FAQ
+document.querySelectorAll(".faq-item").forEach(item => {
+item.addEventListener("click", () => {
+item.classList.toggle("active");
+});
+});
+</script>
 
 </body>
 </html>
