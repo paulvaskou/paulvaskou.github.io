@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Investir en Suisse</title>
+<title>2e Pilier - Investir en Suisse</title>
 
 <style>
 body {
@@ -33,68 +33,60 @@ body {
 header {
     margin-top:70px;
     background:#c40000;
-    padding:50px;
+    padding:40px;
     text-align:center;
 }
 header img {
-    height:160px;
+    height:120px;
 }
 
 /* CONTENU */
 section {
     max-width:1100px;
     margin:auto;
-    padding:40px 20px;
+    padding:30px 20px;
     text-align:center;
 }
 
 h1 {
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
-/* BULLES */
-.bubbles {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+/* COMPTEUR */
+.counter {
+    font-size:22px;
+    font-weight:bold;
+    color:#c40000;
+    background:white;
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:20px;
     margin-bottom:30px;
 }
 
-.bubble {
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:20px;
+}
+
+/* CARRES */
+.box {
     background:white;
-    padding:15px 20px;
+    padding:20px;
     border-radius:12px;
     box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    border-left:5px solid #c40000;
+    text-align:left;
 }
 
-/* TEXTE */
-.intro {
-    margin:30px 0;
-    color:#555;
+.box strong {
+    color:#c40000;
 }
 
-/* BOUTONS */
-.buttons {
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-    margin-bottom:40px;
-}
-
-.buttons a {
-    background:#c40000;
-    color:white;
-    padding:15px 25px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* FORMULAIRE */
+/* FORM */
 .cta {
-    text-align:center;
     margin-top:40px;
 }
 
@@ -115,9 +107,8 @@ button {
     background:#c40000;
     color:white;
     border:none;
-    padding:15px 25px;
+    padding:15px;
     border-radius:8px;
-    font-size:16px;
     cursor:pointer;
 }
 
@@ -142,7 +133,6 @@ footer {
     border-radius:50px;
     font-size:20px;
     text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -164,34 +154,78 @@ footer {
 
 <section>
 
-<h1>La Suisse : un système unique</h1>
+<h1>🔎 Retrouver son 2e Pilier (LPP)</h1>
 
-<div class="bubbles">
-    <div class="bubble">💳 Assurance santé obligatoire</div>
-    <div class="bubble">🏦 Système de retraite en piliers</div>
-    <div class="bubble">📊 Optimisation financière essentielle</div>
+<div class="counter">
++ 800 000 CHF retrouvés en 2025
 </div>
 
-<div class="intro">
-Sans accompagnement, il est facile de se perdre dans le système suisse.<br><br>
-Faites vous accompagner par un expert agréé FINMA pour comprendre, optimiser et sécuriser votre situation financière.
+<div class="grid">
+
+<div class="box">
+<strong>Un droit pour tous</strong><br><br>
+Chaque travailleur de plus de 25 ans a droit à cet argent.
 </div>
 
-<div class="buttons">
-    <a href="2epilier.html">2e Pilier</a>
-    <a href="3epilier.html">3e Pilier</a>
-    <a href="assurance.html">Assurance santé</a>
-    <a href="investissement.html">Investissement en Suisse</a>
+<div class="box">
+<strong>Des milliards oubliés</strong><br><br>
+On estime que plus de <strong>10 milliards de francs</strong> restent non déclarés en Suisse.
 </div>
 
-<!-- FORMULAIRE -->
+<div class="box">
+<strong>Pourquoi cet argent est perdu</strong><br><br>
+Changement d’emploi, départ à l’étranger ou oubli administratif :  
+les avoirs peuvent être transférés sur des comptes de libre passage puis totalement perdus de vue.
+</div>
+
+<div class="box">
+<strong>Des montants importants</strong><br><br>
+Dans certains cas, cela peut représenter <strong>plusieurs dizaines de milliers de francs</strong>.
+</div>
+
+<div class="box">
+<strong>Un système complexe</strong><br><br>
+Plus de 1'500 institutions, des démarches longues et peu transparentes.
+</div>
+
+<div class="box">
+<strong>L’importance d’un accompagnement</strong><br><br>
+Un expert permet de retrouver ces fonds rapidement et d’en optimiser l’utilisation.
+</div>
+
+</div>
+
+<!-- 🔥 BLOC CRÉDIBILITÉ (remplace témoignages) -->
+<div class="grid" style="margin-top:40px;">
+
+<div class="box">
+<strong>🔒 Une approche sérieuse</strong><br><br>
+Chaque situation est analysée dans le respect des normes FINMA.
+</div>
+
+<div class="box">
+<strong>📊 Des résultats concrets</strong><br><br>
+Plus de <strong>800 000 CHF retrouvés en 2025</strong>.
+</div>
+
+<div class="box">
+<strong>⚡ Un gain de temps</strong><br><br>
+Des démarches souvent longues, simplifiées grâce à un accompagnement.
+</div>
+
+<div class="box">
+<strong>🤝 Un accompagnement indépendant</strong><br><br>
+Les solutions sont choisies uniquement dans l’intérêt du client.
+</div>
+
+</div>
+
+<!-- FORM -->
 <div class="cta">
     <h2>📞 Être rappelé gratuitement</h2>
 
     <form action="https://formspree.io/f/mwvrznqr" method="POST">
-        
         <input type="text" name="nom" placeholder="Votre nom" required>
-        
         <input type="tel" name="telephone" placeholder="Votre numéro" required>
 
         <select name="motif" required>
@@ -210,15 +244,13 @@ Faites vous accompagner par un expert agréé FINMA pour comprendre, optimiser e
 
 <!-- FOOTER -->
 <footer>
-    <p>
-        Paul Vaskou — Conseiller financier agréé FINMA<br>
-        Numéro FINMA : F01560250
-    </p>
+    Paul Vaskou — Conseiller financier agréé FINMA<br>
+    Numéro FINMA : F01560250
 </footer>
 
-<!-- WHATSAPP (PC + MOBILE OK) -->
-<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509&text=Bonjour%20je%20souhaite%20%C3%AAtre%20rappel%C3%A9" target="_blank">
-    💬
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509&text=Bonjour%20je%20souhaite%20des%20informations%20sur%20le%202e%20pilier" target="_blank">
+💬
 </a>
 
 </body>
