@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assurance santé - Résidents</title>
+<title>Assurance résident - Investir en Suisse</title>
 
 <style>
 body {
@@ -33,33 +33,31 @@ body {
 header {
     margin-top:70px;
     background:#c40000;
-    padding:40px 20px;
+    padding:40px;
     text-align:center;
 }
 header img {
-    height:140px;
+    height:120px;
 }
 
-/* CONTENU */
+/* SECTION */
 section {
     max-width:1100px;
     margin:auto;
     padding:30px 20px;
-}
-
-h1 {
     text-align:center;
 }
 
-/* ACCROCHE */
-.hero {
-    text-align:center;
-    margin-bottom:30px;
-    font-size:20px;
-}
-.hero span {
-    color:#c40000;
+/* COMPTEUR */
+.counter {
+    font-size:24px;
     font-weight:bold;
+    color:#c40000;
+    background:white;
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:20px;
+    margin-bottom:30px;
 }
 
 /* GRID */
@@ -76,136 +74,218 @@ h1 {
     border-radius:12px;
     box-shadow:0 4px 10px rgba(0,0,0,0.05);
     border-left:5px solid #c40000;
+    text-align:left;
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.6s;
+}
+.box.show {
+    opacity:1;
+    transform:translateY(0);
 }
 
-/* CTA */
+/* FAQ */
+.faq {
+    margin-top:50px;
+    text-align:left;
+}
+.faq-item {
+    background:white;
+    margin-bottom:10px;
+    border-radius:10px;
+    overflow:hidden;
+}
+.faq-question {
+    padding:15px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.faq-answer {
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s;
+    padding:0 15px;
+    color:#555;
+}
+.faq-item.active .faq-answer {
+    max-height:300px;
+    padding:15px;
+}
+
+/* FORM */
 .cta {
-    text-align:center;
     margin-top:40px;
 }
-
+input, select {
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+form {
+    max-width:400px;
+    margin:auto;
+}
 button {
     background:#c40000;
     color:white;
     border:none;
-    padding:15px 25px;
+    padding:15px;
     border-radius:8px;
-    font-size:16px;
     cursor:pointer;
 }
 
-/* MOBILE */
-@media(max-width:600px){
-    header img {
-        height:100px;
-    }
+/* FOOTER */
+footer {
+    margin-top:40px;
+    border-top:1px solid #eee;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50px;
+    font-size:20px;
+    text-decoration:none;
+    animation:pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {transform:scale(1);}
+    50% {transform:scale(1.1);}
+    100% {transform:scale(1);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-    <a href="index.html">Accueil</a>
-    <a href="2epilier.html">2e Pilier</a>
-    <a href="3epilier.html">3e Pilier</a>
-    <a href="assurance.html">Assurance santé</a>
-    <a href="investissement.html">Investissement</a>
+<a href="index.html">Accueil</a>
+<a href="2epilier.html">2e Pilier</a>
+<a href="3epilier.html">3e Pilier</a>
+<a href="assurance.html">Assurance santé</a>
+<a href="investissement.html">Investissement</a>
 </nav>
 
 <header>
-    <img src="logo.jpeg">
+<img src="logo.jpeg">
 </header>
 
 <section>
 
 <h1>🏥 Assurance santé en Suisse</h1>
 
-<div class="hero">
-    💰 Des économies pouvant atteindre <span>100 CHF par mois et par personne</span>
+<div class="counter">
+Jusqu’à 100 CHF d’économies / mois
 </div>
 
 <div class="grid">
 
-<div class="box">
-<h3>💥 Un système obligatoire… mais complexe</h3>
-<p>
-Beaucoup de résidents paient trop cher sans le savoir.
-</p>
+<div class="box">📊 <strong>Un système complexe</strong><br><br>26 cantons, plus de 50 caisses et des milliers de primes.</div>
+
+<div class="box">💰 <strong>Des économies possibles</strong><br><br>Jusqu’à 100 CHF par mois selon votre situation.</div>
+
+<div class="box">🎯 <strong>Optimisation globale</strong><br><br>Base + complémentaires à analyser ensemble.</div>
+
+<div class="box">🏋️ <strong>Remboursements méconnus</strong><br><br>Fitness, soins spécifiques, médecines alternatives.</div>
+
+<div class="box">🌍 <strong>Soins à l’étranger</strong><br><br>Possibilité de prise en charge selon les contrats.</div>
+
+<div class="box">👨‍👩‍👧 <strong>Rabais famille</strong><br><br>Réductions importantes dès un enfant.</div>
+
+<div class="box">⚖️ <strong>Prix vs prestations</strong><br><br>Certaines caisses premium moins chères que low-cost.</div>
+
+<div class="box">📉 <strong>Petite complémentaire utile</strong><br><br>10 CHF peuvent faire économiser beaucoup plus.</div>
+
+<div class="box">🤝 <strong>Conseil indépendant</strong><br><br>Choix dans votre intérêt, pas celui des assurances.</div>
+
 </div>
 
-<div class="box">
-<h3>📊 Un système unique</h3>
-<p>
-26 cantons, 3 classes d’âge et plus de 50 assureurs.  
-👉 Il existe quasiment autant de primes que d’assurés.
-</p>
+<!-- FAQ -->
+<div class="faq">
+
+<h2>❓ Questions fréquentes</h2>
+
+<div class="faq-item">
+<div class="faq-question">Puis-je changer d’assurance ?</div>
+<div class="faq-answer">Oui, chaque année sous conditions.</div>
 </div>
 
-<div class="box">
-<h3>❗ Ce que beaucoup ignorent</h3>
-<p>
-Des prestations sont remboursées :
-<br>• fitness  
-<br>• soins à l’étranger  
-<br>• médecines alternatives  
-<br>• soins spécifiques
-</p>
+<div class="faq-item">
+<div class="faq-question">Pourquoi les prix varient autant ?</div>
+<div class="faq-answer">Les primes dépendent du canton, de l’âge et de la caisse.</div>
 </div>
 
-<div class="box">
-<h3>👨‍👩‍👧 Rabais famille</h3>
-<p>
-Des réductions importantes existent dès le premier enfant.
-</p>
+<div class="faq-item">
+<div class="faq-question">Est-ce que je suis bien couvert ?</div>
+<div class="faq-answer">Pas forcément, beaucoup de personnes sont mal optimisées.</div>
 </div>
 
-<div class="box">
-<h3>⚙️ Optimisation globale</h3>
-<p>
-Base + complémentaires + franchise + modèle :  
-tout doit être optimisé ensemble.
-</p>
-</div>
-
-<div class="box">
-<h3>💡 Un détail qui change tout</h3>
-<p>
-Une complémentaire à 10 CHF peut faire économiser bien plus.
-</p>
-</div>
-
-<div class="box">
-<h3>📈 Idée reçue</h3>
-<p>
-Des caisses premium peuvent être moins chères  
-que des low-cost.
-</p>
-</div>
-
-<div class="box">
-<h3>🤝 Conseil indépendant</h3>
-<p>
-Conseil 100% indépendant, orienté uniquement dans votre intérêt.
-</p>
-</div>
-
-<div class="box">
-<h3>🎯 Objectif</h3>
-<p>
-Payer le juste prix et améliorer sa couverture.
-</p>
+<div class="faq-item">
+<div class="faq-question">Est-ce que cela a un coût ?</div>
+<div class="faq-answer">Non. Le rendez-vous et l’analyse sont gratuits.</div>
 </div>
 
 </div>
 
+<!-- FORM -->
 <div class="cta">
-    <h2>📞 Être rappelé gratuitement</h2>
-    <button>Se faire rappeler</button>
+<h2>📞 Être rappelé gratuitement</h2>
+
+<form action="https://formspree.io/f/mwvrznqr" method="POST">
+<input type="text" name="nom" placeholder="Votre nom" required>
+<input type="tel" name="telephone" placeholder="Votre numéro" required>
+
+<select name="motif" required>
+<option value="">Motif de la demande</option>
+<option>2e Pilier</option>
+<option>3e Pilier</option>
+<option>Assurance santé</option>
+<option>Investissement</option>
+</select>
+
+<button type="submit">Être rappelé</button>
+</form>
 </div>
 
 </section>
+
+<footer>
+Paul Vaskou — Conseiller financier agréé FINMA<br>
+Numéro FINMA : F01560250
+</footer>
+
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509" target="_blank">
+💬
+</a>
+
+<script>
+// animation blocs
+const boxes = document.querySelectorAll('.box');
+window.addEventListener('scroll', () => {
+boxes.forEach(box => {
+if(box.getBoundingClientRect().top < window.innerHeight - 50){
+box.classList.add('show');
+}
+});
+});
+
+// FAQ
+document.querySelectorAll(".faq-item").forEach(item => {
+item.addEventListener("click", () => {
+item.classList.toggle("active");
+});
+});
+</script>
 
 </body>
 </html>
