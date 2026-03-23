@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Investir en Suisse</title>
 
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ERMMTRQZ96"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ERMMTRQZ96');
+</script>
+
 <style>
 body {
     margin:0;
@@ -12,7 +21,6 @@ body {
     background:#f7f7f7;
 }
 
-/* NAVBAR */
 .navbar {
     position:fixed;
     top:0;
@@ -20,7 +28,6 @@ body {
     background:#c40000;
     padding:15px;
     text-align:center;
-    z-index:1000;
 }
 .navbar a {
     color:white;
@@ -29,75 +36,37 @@ body {
     font-weight:bold;
 }
 
-/* HEADER */
 header {
     margin-top:70px;
     background:#c40000;
-    padding:50px;
+    padding:40px;
     text-align:center;
 }
 header img {
-    height:160px;
+    height:120px;
 }
 
-/* CONTENU */
 section {
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
     padding:40px 20px;
     text-align:center;
 }
 
-h1 {
-    margin-bottom:20px;
-}
-
-/* BULLES */
-.bubbles {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-bottom:30px;
-}
-
-.bubble {
-    background:white;
-    padding:15px 20px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* TEXTE */
-.intro {
-    margin:30px 0;
-    color:#555;
-}
-
-/* BOUTONS */
-.buttons {
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-    margin-bottom:40px;
-}
-
-.buttons a {
+.btn {
+    display:inline-block;
+    margin:10px;
     background:#c40000;
     color:white;
-    padding:15px 25px;
+    padding:12px 20px;
     border-radius:8px;
     text-decoration:none;
-    font-weight:bold;
 }
 
-/* FORMULAIRE */
-.cta {
-    text-align:center;
-    margin-top:40px;
+form {
+    max-width:400px;
+    margin:auto;
 }
-
 input, select {
     width:100%;
     padding:12px;
@@ -105,121 +74,71 @@ input, select {
     border-radius:8px;
     border:1px solid #ccc;
 }
-
-form {
-    max-width:400px;
-    margin:auto;
-}
-
 button {
     background:#c40000;
     color:white;
     border:none;
-    padding:15px 25px;
+    padding:15px;
     border-radius:8px;
-    font-size:16px;
     cursor:pointer;
 }
 
-/* FOOTER */
 footer {
     margin-top:40px;
-    border-top:1px solid #eee;
-    text-align:center;
     padding:20px;
     font-size:14px;
-    color:#666;
-}
-
-/* WHATSAPP */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 18px;
-    border-radius:50px;
-    font-size:20px;
-    text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-    <a href="index.html">Accueil</a>
-    <a href="2epilier.html">2e Pilier</a>
-    <a href="3epilier.html">3e Pilier</a>
-    <a href="assurance.html">Assurance santé</a>
-    <a href="investissement.html">Investissement</a>
+<a href="index.html">Accueil</a>
+<a href="2epilier.html">2e Pilier</a>
+<a href="3epilier.html">3e Pilier</a>
+<a href="assurance.html">Assurance santé</a>
+<a href="investissement.html">Investissement</a>
 </nav>
 
 <header>
-    <img src="logo.jpeg">
+<img src="logo.jpeg">
 </header>
 
 <section>
 
 <h1>La Suisse : un système unique</h1>
 
-<div class="bubbles">
-    <div class="bubble">💳 Assurance santé obligatoire</div>
-    <div class="bubble">🏦 Système de retraite en piliers</div>
-    <div class="bubble">📊 Optimisation financière essentielle</div>
-</div>
+<p>Faites-vous accompagner par un expert agréé FINMA pour optimiser votre situation.</p>
 
-<div class="intro">
-Sans accompagnement, il est facile de se perdre dans le système suisse.<br><br>
-Faites vous accompagner par un expert agréé FINMA pour comprendre, optimiser et sécuriser votre situation financière.
-</div>
+<a href="2epilier.html" class="btn">2e Pilier</a>
+<a href="3epilier.html" class="btn">3e Pilier</a>
+<a href="assurance.html" class="btn">Assurance santé</a>
+<a href="investissement.html" class="btn">Investissement</a>
 
-<div class="buttons">
-    <a href="2epilier.html">2e Pilier</a>
-    <a href="3epilier.html">3e Pilier</a>
-    <a href="assurance.html">Assurance santé</a>
-    <a href="investissement.html">Investissement en Suisse</a>
-</div>
+<h2>📞 Être rappelé gratuitement</h2>
 
-<!-- FORMULAIRE -->
-<div class="cta">
-    <h2>📞 Être rappelé gratuitement</h2>
+<form action="https://formspree.io/f/mwvrznqr" method="POST">
+<input type="text" name="nom" placeholder="Votre nom" required>
+<input type="tel" name="telephone" placeholder="Votre numéro" required>
 
-    <form action="https://formspree.io/f/mwvrznqr" method="POST">
-        
-        <input type="text" name="nom" placeholder="Votre nom" required>
-        
-        <input type="tel" name="telephone" placeholder="Votre numéro" required>
+<select name="motif" required>
+<option value="">Motif de la demande</option>
+<option>2e Pilier</option>
+<option>3e Pilier</option>
+<option>Assurance santé</option>
+<option>Investissement</option>
+</select>
 
-        <select name="motif" required>
-            <option value="">Motif de la demande</option>
-            <option>2e Pilier</option>
-            <option>3e Pilier</option>
-            <option>Assurance santé</option>
-            <option>Investissement</option>
-        </select>
-
-        <button type="submit">Être rappelé</button>
-    </form>
-</div>
+<button type="submit">Être rappelé</button>
+</form>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>
-        Paul Vaskou — Conseiller financier agréé FINMA<br>
-        Numéro FINMA : F01560250
-    </p>
+Paul Vaskou — Conseiller financier agréé FINMA<br>
+Numéro FINMA : F01560250
 </footer>
-
-<!-- WHATSAPP (PC + MOBILE OK) -->
-<a class="whatsapp" href="https://api.whatsapp.com/send?phone=41783515509&text=Bonjour%20je%20souhaite%20%C3%AAtre%20rappel%C3%A9" target="_blank">
-    💬
-</a>
 
 </body>
 </html>
