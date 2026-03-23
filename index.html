@@ -17,35 +17,48 @@ gtag('config', 'G-ERMMTRQZ96');
 <style>
 body {
     margin:0;
-    font-family:Arial;
-    background:#f7f7f7;
+    font-family:'Segoe UI', Arial;
+    background:#f4f6f9;
+    color:#333;
 }
 
+/* NAVBAR */
 .navbar {
     position:fixed;
     top:0;
+    left:0;
     width:100%;
-    background:#c40000;
+    background:#d90429;
+    display:flex;
+    justify-content:center;
+    gap:30px;
     padding:15px;
-    text-align:center;
+    z-index:1000;
 }
+
 .navbar a {
     color:white;
-    margin:0 15px;
     text-decoration:none;
     font-weight:bold;
 }
 
-header {
-    margin-top:70px;
-    background:#c40000;
-    padding:40px;
-    text-align:center;
+.navbar a:hover {
+    text-decoration:underline;
 }
+
+/* HEADER */
+header {
+    background:linear-gradient(135deg,#d90429,#a6031f);
+    padding:60px;
+    text-align:center;
+    margin-top:60px;
+}
+
 header img {
     height:120px;
 }
 
+/* CONTENU */
 section {
     max-width:1000px;
     margin:auto;
@@ -53,20 +66,42 @@ section {
     text-align:center;
 }
 
+h1 {
+    margin-bottom:10px;
+}
+
+.subtitle {
+    color:#666;
+    margin-bottom:30px;
+}
+
+/* BOUTONS */
+.buttons {
+    margin:30px 0;
+}
+
 .btn {
     display:inline-block;
     margin:10px;
-    background:#c40000;
+    background:#d90429;
     color:white;
     padding:12px 20px;
     border-radius:8px;
     text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
 }
 
+.btn:hover {
+    transform:scale(1.05);
+}
+
+/* FORM */
 form {
     max-width:400px;
-    margin:auto;
+    margin:30px auto;
 }
+
 input, select {
     width:100%;
     padding:12px;
@@ -74,67 +109,80 @@ input, select {
     border-radius:8px;
     border:1px solid #ccc;
 }
+
 button {
-    background:#c40000;
+    background:#d90429;
     color:white;
     border:none;
     padding:15px;
     border-radius:8px;
     cursor:pointer;
+    font-weight:bold;
 }
 
+/* FOOTER */
 footer {
     margin-top:40px;
     padding:20px;
     font-size:14px;
+    text-align:center;
+    color:#555;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-<a href="index.html">Accueil</a>
-<a href="2epilier.html">2e Pilier</a>
-<a href="3epilier.html">3e Pilier</a>
-<a href="assurance.html">Assurance santé</a>
-<a href="investissement.html">Investissement</a>
+    <a href="index.html">Accueil</a>
+    <a href="2epilier.html">2e Pilier</a>
+    <a href="3epilier.html">3e Pilier</a>
+    <a href="assurance.html">Assurance santé</a>
+    <a href="investissement.html">Investissement</a>
 </nav>
 
+<!-- HEADER -->
 <header>
-<img src="logo.jpeg">
+    <img src="logo.jpeg">
 </header>
 
+<!-- CONTENU -->
 <section>
 
 <h1>La Suisse : un système unique</h1>
 
-<p>Faites-vous accompagner par un expert agréé FINMA pour optimiser votre situation.</p>
+<p class="subtitle">
+Faites-vous accompagner par un expert agréé FINMA pour comprendre, optimiser et sécuriser votre situation.
+</p>
 
-<a href="2epilier.html" class="btn">2e Pilier</a>
-<a href="3epilier.html" class="btn">3e Pilier</a>
-<a href="assurance.html" class="btn">Assurance santé</a>
-<a href="investissement.html" class="btn">Investissement</a>
+<div class="buttons">
+    <a href="2epilier.html" class="btn">2e Pilier</a>
+    <a href="3epilier.html" class="btn">3e Pilier</a>
+    <a href="assurance.html" class="btn">Assurance santé</a>
+    <a href="investissement.html" class="btn">Investissement</a>
+</div>
 
 <h2>📞 Être rappelé gratuitement</h2>
 
 <form action="https://formspree.io/f/mwvrznqr" method="POST">
-<input type="text" name="nom" placeholder="Votre nom" required>
-<input type="tel" name="telephone" placeholder="Votre numéro" required>
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    <input type="tel" name="telephone" placeholder="Votre numéro" required>
 
-<select name="motif" required>
-<option value="">Motif de la demande</option>
-<option>2e Pilier</option>
-<option>3e Pilier</option>
-<option>Assurance santé</option>
-<option>Investissement</option>
-</select>
+    <select name="motif" required>
+        <option value="">Motif de la demande</option>
+        <option>2e Pilier</option>
+        <option>3e Pilier</option>
+        <option>Assurance santé</option>
+        <option>Investissement</option>
+    </select>
 
-<button type="submit">Être rappelé</button>
+    <button type="submit">Être rappelé</button>
 </form>
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 Paul Vaskou — Conseiller financier agréé FINMA<br>
 Numéro FINMA : F01560250
