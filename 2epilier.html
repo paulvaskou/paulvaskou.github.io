@@ -50,7 +50,7 @@ section {
 
 /* COMPTEUR */
 .counter {
-    font-size:22px;
+    font-size:24px;
     font-weight:bold;
     color:#c40000;
     background:white;
@@ -75,6 +75,14 @@ section {
     box-shadow:0 4px 10px rgba(0,0,0,0.05);
     border-left:5px solid #c40000;
     text-align:left;
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.6s;
+}
+
+.box.show {
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* FAQ */
@@ -87,7 +95,6 @@ section {
     background:white;
     margin-bottom:10px;
     border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.05);
     overflow:hidden;
 }
 
@@ -95,14 +102,19 @@ section {
     padding:15px;
     cursor:pointer;
     font-weight:bold;
-    background:#fff;
 }
 
 .faq-answer {
-    padding:15px;
-    display:none;
-    border-top:1px solid #eee;
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s;
+    padding:0 15px;
     color:#555;
+}
+
+.faq-item.active .faq-answer {
+    max-height:200px;
+    padding:15px;
 }
 
 /* FORM */
@@ -152,6 +164,13 @@ footer {
     border-radius:50px;
     font-size:20px;
     text-decoration:none;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {transform:scale(1);}
+    50% {transform:scale(1.1);}
+    100% {transform:scale(1);}
 }
 </style>
 </head>
@@ -175,55 +194,20 @@ footer {
 <h1>🔎 Retrouver son 2e Pilier (LPP)</h1>
 
 <div class="counter">
-+ 800 000 CHF retrouvés en 2025
++ <span id="counter">0</span> CHF retrouvés en 2025
 </div>
 
 <div class="grid">
 
-<div class="box">
-💡 <strong>Un droit pour tous</strong><br><br>
-Chaque travailleur de plus de 25 ans a droit à cet argent.
-</div>
-
-<div class="box">
-💰 <strong>Des milliards oubliés</strong><br><br>
-Plus de <strong>10 milliards de francs</strong> restent non déclarés.
-</div>
-
-<div class="box">
-🔄 <strong>Pourquoi cet argent est perdu</strong><br><br>
-Changement d’emploi, départ ou oubli administratif.
-</div>
-
-<div class="box">
-📈 <strong>Des montants importants</strong><br><br>
-Plusieurs dizaines de milliers de francs dans certains cas.
-</div>
-
-<div class="box">
-🏦 <strong>Un système complexe</strong><br><br>
-Plus de 1'500 institutions et peu de transparence.
-</div>
-
-<div class="box">
-🎯 <strong>L’importance d’un accompagnement</strong><br><br>
-Retrouver et optimiser rapidement vos fonds.
-</div>
-
-<div class="box">
-🔒 <strong>Une approche sérieuse</strong><br><br>
-Respect total des normes FINMA.
-</div>
-
-<div class="box">
-⚡ <strong>Un gain de temps</strong><br><br>
-Des démarches simplifiées.
-</div>
-
-<div class="box">
-🤝 <strong>Un accompagnement indépendant</strong><br><br>
-Toujours dans votre intérêt.
-</div>
+<div class="box">💡 <strong>Un droit pour tous</strong><br><br>Chaque travailleur a droit à cet argent.</div>
+<div class="box">💰 <strong>Des milliards oubliés</strong><br><br>Plus de 10 milliards non déclarés.</div>
+<div class="box">🔄 <strong>Pourquoi cet argent est perdu</strong><br><br>Changement d’emploi ou oubli.</div>
+<div class="box">📈 <strong>Des montants importants</strong><br><br>Jusqu’à plusieurs dizaines de milliers.</div>
+<div class="box">🏦 <strong>Un système complexe</strong><br><br>Plus de 1'500 institutions.</div>
+<div class="box">🎯 <strong>Accompagnement essentiel</strong><br><br>Optimiser et récupérer.</div>
+<div class="box">🔒 <strong>Approche sérieuse</strong><br><br>Normes FINMA respectées.</div>
+<div class="box">⚡ <strong>Gain de temps</strong><br><br>Démarches simplifiées.</div>
+<div class="box">🤝 <strong>Indépendance</strong><br><br>100% intérêt client.</div>
 
 </div>
 
@@ -234,27 +218,27 @@ Toujours dans votre intérêt.
 
 <div class="faq-item">
 <div class="faq-question">Est-ce que j’ai forcément de l’argent à récupérer ?</div>
-<div class="faq-answer">Pas forcément, mais beaucoup de personnes ignorent qu’elles disposent d’avoirs oubliés.</div>
+<div class="faq-answer">Pas forcément, mais beaucoup de personnes en ont sans le savoir.</div>
 </div>
 
 <div class="faq-item">
 <div class="faq-question">Est-ce que la démarche est compliquée ?</div>
-<div class="faq-answer">Sans accompagnement, la démarche est complexe. L’objectif est de faire cela sans prise de tête, avec un professionnel.</div>
+<div class="faq-answer">Sans accompagnement, c’est complexe. L’objectif est de faire simple avec un pro.</div>
 </div>
 
 <div class="faq-item">
 <div class="faq-question">Combien de temps ça prend ?</div>
-<div class="faq-answer">Cela dépend des cas, mais peut prendre plusieurs semaines.</div>
+<div class="faq-answer">Cela peut prendre plusieurs semaines selon les cas.</div>
 </div>
 
 <div class="faq-item">
 <div class="faq-question">Est-ce que cela a un coût ?</div>
-<div class="faq-answer">Non. Le rendez-vous et la recherche sont toujours gratuits.</div>
+<div class="faq-answer">Non. Le rendez-vous et la recherche sont gratuits.</div>
 </div>
 
 <div class="faq-item">
 <div class="faq-question">Est-ce que c’est sécurisé ?</div>
-<div class="faq-answer">Oui, dans le respect des normes suisses et FINMA.</div>
+<div class="faq-answer">Oui, conforme aux normes suisses et FINMA.</div>
 </div>
 
 </div>
@@ -291,10 +275,35 @@ Numéro FINMA : F01560250
 </a>
 
 <script>
-document.querySelectorAll(".faq-question").forEach(q => {
-q.addEventListener("click", () => {
-let answer = q.nextElementSibling;
-answer.style.display = answer.style.display === "block" ? "none" : "block";
+// apparition des blocs
+const boxes = document.querySelectorAll('.box');
+window.addEventListener('scroll', () => {
+boxes.forEach(box => {
+const top = box.getBoundingClientRect().top;
+if(top < window.innerHeight - 50){
+box.classList.add('show');
+}
+});
+});
+
+// compteur animé
+let count = 0;
+let target = 800000;
+let speed = 2000;
+
+let counter = setInterval(() => {
+count += 5000;
+if(count >= target){
+count = target;
+clearInterval(counter);
+}
+document.getElementById("counter").innerText = count.toLocaleString();
+}, 10);
+
+// FAQ animation
+document.querySelectorAll(".faq-item").forEach(item => {
+item.addEventListener("click", () => {
+item.classList.toggle("active");
 });
 });
 </script>
